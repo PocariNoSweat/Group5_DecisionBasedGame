@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/introbackground1">
+
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="165dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="36dp"
+        android:text="Start Game"
+        android:fontFamily="@raw/notepad"
+        android:textColor="#bcbca9"
+        app:backgroundTint="#515651"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="165dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="20dp"
+        android:text="Load Game"
+        android:fontFamily="@raw/notepad"
+        android:textColor="#bcbca9"
+        app:backgroundTint="#515651"
+        app:layout_constraintStart_toStartOf="@+id/btn1"
+        app:layout_constraintTop_toBottomOf="@+id/btn1" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="165dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="20dp"
+        android:text="Settings"
+        android:textColor="#bcbca9"
+        android:fontFamily="@raw/notepad"
+        app:backgroundTint="#515651"
+        app:layout_constraintStart_toStartOf="@+id/btn2"
+        app:layout_constraintTop_toBottomOf="@+id/btn2" />
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="165dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="20dp"
+        android:text="Credits"
+        android:textColor="#bcbca9"
+        android:fontFamily="@raw/notepad"
+        app:backgroundTint="#515651"
+        app:layout_constraintStart_toStartOf="@+id/btn3"
+        app:layout_constraintTop_toBottomOf="@+id/btn3" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="35dp"
+        android:layout_height="33dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:srcCompat="@drawable/ic_baseline_info_24" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="48dp"
+        android:fontFamily="@raw/watcher"
+        android:text="Oblivion"
+        android:textColor="	#7e7b79"
+        android:textSize="150sp"
+        android:alpha="0.8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="46dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_audiotrack_24" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
