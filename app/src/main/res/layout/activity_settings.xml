@@ -8,20 +8,21 @@
 
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txtSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="28dp"
         android:fontFamily="@raw/notepad"
         android:text="Settings"
         android:textColor="#bcbca9"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/Languages"
+        android:id="@+id/txtLanguages"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
@@ -81,7 +82,7 @@
         app:layout_constraintTop_toTopOf="@+id/musicbtn3" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/englanguage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
@@ -91,11 +92,11 @@
         android:text="English"
         android:textColor="#7e7b79"
         android:textSize="22sp"
-        app:layout_constraintStart_toEndOf="@+id/Languages"
+        app:layout_constraintStart_toEndOf="@+id/txtLanguages"
         app:layout_constraintTop_toBottomOf="@+id/musicbtn1" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/ceblanguage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -104,11 +105,11 @@
         android:text="Cebuano"
         android:textColor="#7e7b79"
         android:textSize="22sp"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toTopOf="@+id/textView5" />
+        app:layout_constraintStart_toEndOf="@+id/englanguage"
+        app:layout_constraintTop_toTopOf="@+id/englanguage" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/japlanguage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
@@ -116,13 +117,13 @@
         android:clickable="true"
         android:fontFamily="@raw/adam"
         android:text="日本"
-        android:textSize="22sp"
         android:textColor="#7e7b79"
-        app:layout_constraintStart_toStartOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="@+id/englanguage"
+        app:layout_constraintTop_toBottomOf="@+id/englanguage" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/taglanguage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -131,11 +132,11 @@
         android:text="Tagalog"
         android:textColor="#7e7b79"
         android:textSize="22sp"
-        app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toTopOf="@+id/textView6" />
+        app:layout_constraintStart_toEndOf="@+id/ceblanguage"
+        app:layout_constraintTop_toTopOf="@+id/ceblanguage" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/ruslanguage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -144,11 +145,11 @@
         android:text="русский"
         android:textColor="#7e7b79"
         android:textSize="22sp"
-        app:layout_constraintStart_toEndOf="@+id/textView8"
-        app:layout_constraintTop_toTopOf="@+id/textView8" />
+        app:layout_constraintStart_toEndOf="@+id/japlanguage"
+        app:layout_constraintTop_toTopOf="@+id/japlanguage" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/chilanguage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -157,8 +158,8 @@
         android:text="中国人"
         android:textColor="#7e7b79"
         android:textSize="22sp"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toTopOf="@+id/textView9" />
+        app:layout_constraintStart_toEndOf="@+id/ruslanguage"
+        app:layout_constraintTop_toTopOf="@+id/ruslanguage" />
 
     <Button
         android:id="@+id/btnback"
@@ -166,10 +167,25 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="16dp"
+        android:clickable="true"
         android:text="Back"
         android:textColor="#7e7b79"
         app:backgroundTint="#bcbca9"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtlogsettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:fontFamily="@raw/notepad"
+        android:text="Text Log"
+        android:textSize="36sp"
+        android:textColor="#bcbca9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSettings" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

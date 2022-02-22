@@ -2,10 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.Intro"
-    android:background="@drawable/green">
+    android:background="@drawable/green"
+    tools:context=".view.Intro">
 
     <TextView
         android:id="@+id/txtsplash1"
@@ -13,8 +14,8 @@
         android:layout_height="90dp"
         android:text="@string/disclaimer_text"
         android:textAlignment="center"
-        android:textSize="16sp"
         android:textColor="#bcbca9"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -29,11 +30,38 @@
         android:layout_marginTop="140dp"
         android:text="@string/beta_text"
         android:textAlignment="center"
-        android:textSize="12sp"
         android:textColor="#bcbca9"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtsplash1" />
+
+    <TextView
+        android:id="@+id/txtsplash3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="240dp"
+        android:text="@string/screen_text"
+        android:textAlignment="center"
+        android:textColor="#bcbca9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtsplash4" />
+
+    <TextView
+        android:id="@+id/txtsplash4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:fontFamily="@raw/adam"
+        android:text="Ready"
+        android:textColor="	#7e7b79"
+        android:textSize="150sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

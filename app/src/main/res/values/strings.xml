@@ -2,4 +2,5 @@
     <string name="app_name">Group5_DecisionBasedGame</string>
     <string name="disclaimer_text">This is a work of fiction. Names, characters, places and incidents either are products of the author’s imagination or are used fictitiously. Any resemblance to actual events or locales or persons, living or dead, is entirely coincidental.</string>
     <string name="beta_text">Please note that this is a beta version of the game which is still undergoing final testing before its official release. The game, its software and all content found on it are provided on an “as is” and “as available” basis.</string>
+    <string name="screen_text">Group 5 LTD. Touch screen to continue... </string>
 </resources>
