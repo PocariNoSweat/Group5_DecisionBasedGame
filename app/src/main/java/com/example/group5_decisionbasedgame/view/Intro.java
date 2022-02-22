@@ -39,9 +39,9 @@ public class Intro extends AppCompatActivity {
         hideElement.setDuration(0);
         hideElement.setFillAfter(true);
         hideElement.setStartOffset(fadeIn.getStartOffset());
-        fadeIn.setDuration(5000);
+        fadeIn.setDuration(3000);
         fadeIn.setFillAfter(true);
-        fadeOut.setDuration(5000);
+        fadeOut.setDuration(3000);
         fadeOut.setFillAfter(true);
         fadeOut.setStartOffset(fadeIn.getStartOffset());
 
