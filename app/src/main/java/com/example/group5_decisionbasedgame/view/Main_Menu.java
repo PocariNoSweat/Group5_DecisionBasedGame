@@ -1,5 +1,7 @@
 package com.example.group5_decisionbasedgame.view;
 
+import static com.example.group5_decisionbasedgame.controller.MusicRandomizer.MainMenu_music;
+
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Build;
@@ -10,6 +12,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.group5_decisionbasedgame.R;
+import com.example.group5_decisionbasedgame.controller.MusicRandomizer;
 
 public class Main_Menu extends AppCompatActivity implements View.OnClickListener {
 
@@ -24,10 +27,7 @@ public class Main_Menu extends AppCompatActivity implements View.OnClickListener
 
         //media player
 
-        player = MediaPlayer.create(this, R.raw.mainmenumusic);
-        player.setLooping(true);
-        player.setVolume(100, 100);
-        player.start();
+        MusicRandomizer.MainMenuMusic(this);
 
         //buttons and listeners
         Button btn1 = findViewById(R.id.btn1);
@@ -41,21 +41,21 @@ public class Main_Menu extends AppCompatActivity implements View.OnClickListener
 
         Button btn4 = findViewById(R.id.btn4);
         btn4.setOnClickListener(this);
+
     }
 
     @Override
     public void onClick(View v) {
 
+
+
         switch (v.getId()) {
             case R.id.btn3:
                 startActivity(new Intent(Main_Menu.this, Settings.class));
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-
-
-
+                MainMenu_music.stop();
         }
     }
-
 
     private void enableFullscreen() {
         View decorView = getWindow().getDecorView();

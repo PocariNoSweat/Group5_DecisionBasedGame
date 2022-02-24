@@ -21,82 +21,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <TextView
         android:id="@+id/txtLanguages"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="116dp"
         android:fontFamily="@raw/notepad"
         android:text="Languages"
-        android:textColor="#bcbca9"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="@+id/selectmusictxt"
-        app:layout_constraintTop_toBottomOf="@+id/selectmusictxt" />
-
-    <TextView
-        android:id="@+id/selectmusictxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="120dp"
-        android:fontFamily="@raw/notepad"
-        android:text="Select Music"
         android:textColor="#bcbca9"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/musicbtn1"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="108dp"
-        android:background="@drawable/circle"
-        android:text="1"
-        android:textColor="#7e7b79"
-        app:layout_constraintStart_toEndOf="@+id/selectmusictxt"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <Button
-        android:id="@+id/musicbtn3"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:background="@drawable/circle"
-        android:text="2"
-        android:textColor="#7e7b79"
-        app:layout_constraintStart_toEndOf="@+id/musicbtn1"
-        app:layout_constraintTop_toTopOf="@+id/musicbtn1" />
-
-    <Button
-        android:id="@+id/musicbtn2"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:background="@drawable/circle"
-        android:text="3"
-        android:textColor="#7e7b79"
-        app:layout_constraintStart_toEndOf="@+id/musicbtn3"
-        app:layout_constraintTop_toTopOf="@+id/musicbtn3" />
-
-    <TextView
-        android:id="@+id/englanguage"
+        android:id="@+id/btneng"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="32dp"
         android:clickable="true"
         android:fontFamily="@raw/adam"
         android:text="English"
         android:textColor="#7e7b79"
         android:textSize="22sp"
+        app:backgroundTint="#bcbca9"
         app:layout_constraintStart_toEndOf="@+id/txtLanguages"
-        app:layout_constraintTop_toBottomOf="@+id/musicbtn1" />
+        app:layout_constraintTop_toBottomOf="@+id/txtSettings" />
 
-    <TextView
-        android:id="@+id/ceblanguage"
+    <Button
+        android:id="@+id/btnceb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -105,25 +60,27 @@
         android:text="Cebuano"
         android:textColor="#7e7b79"
         android:textSize="22sp"
-        app:layout_constraintStart_toEndOf="@+id/englanguage"
-        app:layout_constraintTop_toTopOf="@+id/englanguage" />
+        app:backgroundTint="#bcbca9"
+        app:layout_constraintStart_toEndOf="@+id/btneng"
+        app:layout_constraintTop_toTopOf="@+id/btneng" />
 
-    <TextView
-        android:id="@+id/japlanguage"
+    <Button
+        android:id="@+id/btnjap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="20dp"
         android:clickable="true"
         android:fontFamily="@raw/adam"
         android:text="日本"
         android:textColor="#7e7b79"
         android:textSize="22sp"
-        app:layout_constraintStart_toStartOf="@+id/englanguage"
-        app:layout_constraintTop_toBottomOf="@+id/englanguage" />
+        app:backgroundTint="#bcbca9"
+        app:layout_constraintStart_toStartOf="@+id/btneng"
+        app:layout_constraintTop_toBottomOf="@+id/btneng" />
 
-    <TextView
-        android:id="@+id/taglanguage"
+    <Button
+        android:id="@+id/btntag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -132,11 +89,12 @@
         android:text="Tagalog"
         android:textColor="#7e7b79"
         android:textSize="22sp"
-        app:layout_constraintStart_toEndOf="@+id/ceblanguage"
-        app:layout_constraintTop_toTopOf="@+id/ceblanguage" />
+        app:backgroundTint="#bcbca9"
+        app:layout_constraintStart_toEndOf="@+id/btnceb"
+        app:layout_constraintTop_toTopOf="@+id/btnceb" />
 
-    <TextView
-        android:id="@+id/ruslanguage"
+    <Button
+        android:id="@+id/btnrus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -145,11 +103,12 @@
         android:text="русский"
         android:textColor="#7e7b79"
         android:textSize="22sp"
-        app:layout_constraintStart_toEndOf="@+id/japlanguage"
-        app:layout_constraintTop_toTopOf="@+id/japlanguage" />
+        app:backgroundTint="#bcbca9"
+        app:layout_constraintStart_toEndOf="@+id/btnjap"
+        app:layout_constraintTop_toTopOf="@+id/btnjap" />
 
-    <TextView
-        android:id="@+id/chilanguage"
+    <Button
+        android:id="@+id/btnchi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -158,8 +117,9 @@
         android:text="中国人"
         android:textColor="#7e7b79"
         android:textSize="22sp"
-        app:layout_constraintStart_toEndOf="@+id/ruslanguage"
-        app:layout_constraintTop_toTopOf="@+id/ruslanguage" />
+        app:backgroundTint="#bcbca9"
+        app:layout_constraintStart_toEndOf="@+id/btnrus"
+        app:layout_constraintTop_toTopOf="@+id/btnrus" />
 
     <Button
         android:id="@+id/btnback"
@@ -178,14 +138,15 @@
         android:id="@+id/txtlogsettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
-        android:fontFamily="@raw/notepad"
-        android:text="Text Log"
-        android:textSize="36sp"
+        android:layout_marginBottom="64dp"
+        android:fontFamily="@raw/adam"
+        android:text="Language Applied"
         android:textColor="#bcbca9"
+        android:textSize="40sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSettings" />
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
