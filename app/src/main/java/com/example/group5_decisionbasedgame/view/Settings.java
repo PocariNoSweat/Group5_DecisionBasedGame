@@ -1,7 +1,7 @@
 package com.example.group5_decisionbasedgame.view;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -21,13 +21,14 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        enableFullscreen();
         setContentView(R.layout.activity_settings);
 
         //music player
 
         player = MediaPlayer.create(this, R.raw.settingsmusic);
         player.setLooping(true);
-        player.setVolume(100,100);
+        player.setVolume(100, 100);
         player.start();
 
         // Ids
@@ -58,6 +59,7 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
 
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
 
@@ -69,7 +71,7 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
                 break;
 
             case R.id.btneng:
-                if (txtlogsettings.getVisibility() == View.VISIBLE){
+                if (txtlogsettings.getVisibility() == View.VISIBLE) {
                     txtlogsettings.setVisibility(View.GONE);
                 }
                 AlertDialog.Builder builder = new AlertDialog.Builder(Settings.this);
@@ -78,25 +80,15 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
                 builder.setTitle("Information");
                 builder.setMessage("Change the language to English?");
 
-                builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        txtlogsettings.setVisibility(View.VISIBLE);
-                    }
-                });
+                builder.setPositiveButton("YES", (dialogInterface, i) -> txtlogsettings.setVisibility(View.VISIBLE));
 
-                builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.cancel();
-                    }
-                });
+                builder.setNegativeButton("CANCEL", (dialogInterface, i) -> dialogInterface.cancel());
                 builder.show();
                 break;
 
             case R.id.btntag:
 
-                if (txtlogsettings.getVisibility() == View.VISIBLE){
+                if (txtlogsettings.getVisibility() == View.VISIBLE) {
                     txtlogsettings.setVisibility(View.GONE);
                 }
 
@@ -105,25 +97,15 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
                 builder.setTitle("Information");
                 builder.setMessage("Change the language to Tagalog?");
 
-                builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        txtlogsettings.setVisibility(View.VISIBLE);
-                    }
-                });
+                builder.setPositiveButton("YES", (dialogInterface, i) -> txtlogsettings.setVisibility(View.VISIBLE));
 
-                builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.cancel();
-                    }
-                });
+                builder.setNegativeButton("CANCEL", (dialogInterface, i) -> dialogInterface.cancel());
                 builder.show();
                 break;
 
             case R.id.btnceb:
 
-                if (txtlogsettings.getVisibility() == View.VISIBLE){
+                if (txtlogsettings.getVisibility() == View.VISIBLE) {
                     txtlogsettings.setVisibility(View.GONE);
                 }
 
@@ -133,19 +115,9 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
                 builder.setTitle("Information");
                 builder.setMessage("Change the language to Cebuano?");
 
-                builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        txtlogsettings.setVisibility(View.VISIBLE);
-                    }
-                });
+                builder.setPositiveButton("YES", (dialogInterface, i) -> txtlogsettings.setVisibility(View.VISIBLE));
 
-                builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.cancel();
-                    }
-                });
+                builder.setNegativeButton("CANCEL", (dialogInterface, i) -> dialogInterface.cancel());
                 builder.show();
                 break;
 
@@ -153,7 +125,7 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
             case R.id.btnchi:
             case R.id.btnrus:
 
-                if (txtlogsettings.getVisibility() == View.VISIBLE){
+                if (txtlogsettings.getVisibility() == View.VISIBLE) {
                     txtlogsettings.setVisibility(View.GONE);
                 }
                 builder = new AlertDialog.Builder(Settings.this);
@@ -162,15 +134,24 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
                 builder.setTitle("Information");
                 builder.setMessage("COMING SOON!");
 
-                builder.setNegativeButton("OKAY", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                    }
+                builder.setNegativeButton("OKAY", (dialogInterface, i) -> {
                 });
                 builder.show();
                 break;
 
         }
+    }
+
+    private void enableFullscreen() {
+        View decorView = getWindow().getDecorView();
+        decorView.setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
+                        View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION |
+                        View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN |
+                        View.SYSTEM_UI_FLAG_FULLSCREEN |
+                        View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY |
+                        View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+        );
     }
 }
 
