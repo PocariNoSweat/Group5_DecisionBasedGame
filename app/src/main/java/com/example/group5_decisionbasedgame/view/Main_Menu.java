@@ -2,9 +2,8 @@ package com.example.group5_decisionbasedgame.view;
 
 import static com.example.group5_decisionbasedgame.controller.MusicRandomizer.MainMenu_music;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.media.MediaPlayer;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,9 +15,6 @@ import com.example.group5_decisionbasedgame.controller.MusicRandomizer;
 
 public class Main_Menu extends AppCompatActivity implements View.OnClickListener {
 
-    MediaPlayer player;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +25,7 @@ public class Main_Menu extends AppCompatActivity implements View.OnClickListener
 
         MusicRandomizer.MainMenuMusic(this);
 
-        //buttons and listeners
+        //button IDs and listeners
         Button btn1 = findViewById(R.id.btn1);
         btn1.setOnClickListener(this);
 
@@ -44,30 +40,35 @@ public class Main_Menu extends AppCompatActivity implements View.OnClickListener
 
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
 
-
-
+        //Main buttons for next activities
         switch (v.getId()) {
             case R.id.btn3:
-                startActivity(new Intent(Main_Menu.this, Settings.class));
+                startActivity(new Intent(Main_Menu.this, Settings.class));//When button is touched, it will take you to the settings
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 MainMenu_music.stop();
+                break;
+
+            case R.id.btn1:
+                startActivity(new Intent(Main_Menu.this, AlexIntro.class));//When button is touched, it will take you to the start of the game
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                MainMenu_music.stop();
+                break;
         }
     }
 
     private void enableFullscreen() {
         View decorView = getWindow().getDecorView();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            decorView.setSystemUiVisibility(
-                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
-                            View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION |
-                            View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN |
-                            View.SYSTEM_UI_FLAG_FULLSCREEN |
-                            View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY |
-                            View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-            );
-        }
+        decorView.setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
+                        View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION |
+                        View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN |
+                        View.SYSTEM_UI_FLAG_FULLSCREEN |
+                        View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY |
+                        View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+        );
     }
 }
