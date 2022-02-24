@@ -5,6 +5,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.group5_decisionbasedgame.R;
 
-    public class ToniIntro extends AppCompatActivity {
+    public class ToniIntro extends AppCompatActivity implements View.OnClickListener{
 
         MediaPlayer soundeffect;
 
@@ -26,6 +27,9 @@ import com.example.group5_decisionbasedgame.R;
             //IDs
             TextView txt = findViewById(R.id.touchscreen);
             ImageView toniid = findViewById(R.id.toniid);
+
+            Button btnback = findViewById(R.id.btnback);
+            btnback.setOnClickListener(this);
             soundeffect = MediaPlayer.create(this, R.raw.pageturnsoundeffect);
 
 
@@ -59,6 +63,13 @@ import com.example.group5_decisionbasedgame.R;
                     soundeffect.start();
                 }
             });
+        }
+        public void onClick(View v) {
+
+            if (v.getId() == R.id.btnback) {
+                startActivity(new Intent(ToniIntro.this, Main_Menu.class));
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+            }
         }
 
         private void enableFullscreen() {
