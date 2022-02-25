@@ -3,16 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/green"
+    android:id="@+id/natashaintro"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
-        android:id="@+id/toniid"
+        android:id="@+id/natashaid"
         android:layout_width="500sp"
         android:layout_height="500sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/toniid" />
+        app:srcCompat="@drawable/natashaid" />
 
     <TextView
         android:id="@+id/touchscreen"
@@ -24,6 +26,19 @@
         android:textColor="#bcbca9"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnback"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:text="Back To Main Menu"
+        android:textColor="#7e7b79"
+        app:backgroundTint="#bcbca9"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

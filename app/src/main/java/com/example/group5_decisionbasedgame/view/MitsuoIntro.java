@@ -12,46 +12,52 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.group5_decisionbasedgame.R;
 
-public class LeRodgeIntro extends AppCompatActivity {
+public class MitsuoIntro extends AppCompatActivity {
+
     MediaPlayer soundeffect;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         enableFullscreen();
-        setContentView(R.layout.activity_lerodgeintro);
+        setContentView(R.layout.activity_mitsuointro);
 
         //IDs
         TextView txt = findViewById(R.id.touchscreen);
-        ImageView lerodgeid = findViewById(R.id.lerodgeid);
+        ImageView mitsuoid = findViewById(R.id.mitsuoid);
+
+
         soundeffect = MediaPlayer.create(this, R.raw.pageturnsoundeffect);
+
 
         final AlphaAnimation fadeIn = new AlphaAnimation(0.0f, 1.0f);
         final AlphaAnimation fadeintxt = new AlphaAnimation(0.0f, 1.0f);
-        final AlphaAnimation hideElement = new AlphaAnimation(0.0f, 1.0f);
+        final AlphaAnimation hideElement = new AlphaAnimation(1.0f, 0.0f);
         //touch count
         final int[] touchCount = {0};
 
+        //animations and durations
         hideElement.setDuration(0);
         hideElement.setFillAfter(true);
         fadeintxt.setDuration(10000);
         fadeintxt.setFillAfter(true);
         fadeIn.setDuration(5000);
         fadeIn.setFillAfter(true);
-        //1st animation
+
         txt.startAnimation(hideElement);
-        lerodgeid.startAnimation(hideElement);
-        //2nd animation
+        mitsuoid.startAnimation(hideElement);
+
         txt.startAnimation(fadeintxt);
-        lerodgeid.startAnimation(fadeIn);
+        mitsuoid.startAnimation(fadeIn);
         //close (for cleaning purpose)
 
-        lerodgeid.setOnClickListener(v -> {
+        mitsuoid.setOnClickListener(v -> {
             touchCount[0] = touchCount[0] + 1;
             if (touchCount[0] == 3) {
-                startActivity(new Intent(LeRodgeIntro.this, ToniIntro.class));//When button is touched, it will take you to the next character
+                startActivity(new Intent(MitsuoIntro.this, NatashaIntro.class));//When button is touched, it will take you to the next character
                 overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
-                soundeffect.setVolume(100, 100);
+                soundeffect.setVolume(100,100);
                 soundeffect.start();
             }
         });

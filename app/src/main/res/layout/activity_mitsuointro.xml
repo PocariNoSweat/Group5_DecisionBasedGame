@@ -3,16 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/green"
+    android:id="@+id/mitsuointro"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
-        android:id="@+id/toniid"
+        android:id="@+id/mitsuoid"
         android:layout_width="500sp"
         android:layout_height="500sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/toniid" />
+        app:srcCompat="@drawable/mitsuoid" />
 
     <TextView
         android:id="@+id/touchscreen"

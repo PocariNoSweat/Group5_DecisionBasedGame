@@ -72,7 +72,7 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
 
             case R.id.btneng:
                 if (txtlogsettings.getVisibility() == View.VISIBLE) {
-                    txtlogsettings.setVisibility(View.GONE);
+                    txtlogsettings.setVisibility(View.GONE);//remove "LANGUAGE APPLIED" text when clicking on another button
                 }
                 AlertDialog.Builder builder = new AlertDialog.Builder(Settings.this);
 
@@ -89,7 +89,7 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
             case R.id.btntag:
 
                 if (txtlogsettings.getVisibility() == View.VISIBLE) {
-                    txtlogsettings.setVisibility(View.GONE);
+                    txtlogsettings.setVisibility(View.GONE);//remove "LANGUAGE APPLIED" text when clicking on another button
                 }
 
                 builder = new AlertDialog.Builder(Settings.this);
@@ -106,7 +106,7 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
             case R.id.btnceb:
 
                 if (txtlogsettings.getVisibility() == View.VISIBLE) {
-                    txtlogsettings.setVisibility(View.GONE);
+                    txtlogsettings.setVisibility(View.GONE);//remove "LANGUAGE APPLIED" text when clicking on another button
                 }
 
 
@@ -126,7 +126,7 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
             case R.id.btnrus:
 
                 if (txtlogsettings.getVisibility() == View.VISIBLE) {
-                    txtlogsettings.setVisibility(View.GONE);
+                    txtlogsettings.setVisibility(View.GONE);//remove "LANGUAGE APPLIED" text when clicking on another button
                 }
                 builder = new AlertDialog.Builder(Settings.this);
 

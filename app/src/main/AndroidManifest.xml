@@ -27,6 +27,12 @@
             android:screenOrientation="landscape"/>
         <activity android:name=".view.ToniIntro"
             android:screenOrientation="landscape"/>
+        <activity android:name=".view.BryanIntro"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".view.MitsuoIntro"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".view.NatashaIntro"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>

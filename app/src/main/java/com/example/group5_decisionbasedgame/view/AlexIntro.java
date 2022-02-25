@@ -5,7 +5,6 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.group5_decisionbasedgame.R;
 
-public class AlexIntro extends AppCompatActivity implements View.OnClickListener{
+public class AlexIntro extends AppCompatActivity {
 
     MediaPlayer soundeffect;
 
@@ -28,8 +27,6 @@ public class AlexIntro extends AppCompatActivity implements View.OnClickListener
         TextView txt = findViewById(R.id.touchscreen);
         ImageView alexid = findViewById(R.id.alexid);
 
-        Button btnback = findViewById(R.id.btnback);
-        btnback.setOnClickListener(this);
 
         soundeffect = MediaPlayer.create(this, R.raw.pageturnsoundeffect);
 
@@ -64,13 +61,6 @@ public class AlexIntro extends AppCompatActivity implements View.OnClickListener
                 soundeffect.start();
             }
         });
-    }
-    public void onClick(View v) {
-
-        if (v.getId() == R.id.btnback) {
-            startActivity(new Intent(AlexIntro.this, Main_Menu.class));
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-        }
     }
     private void enableFullscreen() {
         View decorView = getWindow().getDecorView();
