@@ -36,7 +36,7 @@ public class LeRodgeIntro extends AppCompatActivity {
         hideElement.setFillAfter(true);
         fadeintxt.setDuration(10000);
         fadeintxt.setFillAfter(true);
-        fadeIn.setDuration(5000);
+        fadeIn.setDuration(2000);
         fadeIn.setFillAfter(true);
         //1st animation
         txt.startAnimation(hideElement);

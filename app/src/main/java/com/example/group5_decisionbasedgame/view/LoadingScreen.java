@@ -12,10 +12,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.group5_decisionbasedgame.R;
 import com.example.group5_decisionbasedgame.controller.BackgroundRandomizer;
+import com.example.group5_decisionbasedgame.controller.FactRandomizer;
 
 public class LoadingScreen extends AppCompatActivity {
     ImageView background;
-    TextView txtFact, txtaboveFact;
+   public TextView txtFact, txtaboveFact;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
