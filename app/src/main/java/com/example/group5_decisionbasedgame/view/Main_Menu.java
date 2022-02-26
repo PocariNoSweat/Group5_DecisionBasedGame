@@ -46,17 +46,20 @@ public class Main_Menu extends AppCompatActivity implements View.OnClickListener
 
         //Main buttons for next activities
         switch (v.getId()) {
-            case R.id.btn3:
-                startActivity(new Intent(Main_Menu.this, Settings.class));//When button is touched, it will take you to the settings
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-                MainMenu_music.stop();
-                break;
 
             case R.id.btn1:
                 startActivity(new Intent(Main_Menu.this, AlexIntro.class));//When button is touched, it will take you to the start of the game
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 MainMenu_music.stop();
                 break;
+
+            case R.id.btn3:
+                startActivity(new Intent(Main_Menu.this, Settings.class));//When button is touched, it will take you to the settings
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                MainMenu_music.stop();
+                break;
+
+
         }
     }
 

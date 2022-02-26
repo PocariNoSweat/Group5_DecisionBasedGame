@@ -57,7 +57,7 @@ public class NatashaIntro extends AppCompatActivity implements View.OnClickListe
         natashaid.setOnClickListener(v -> {
             touchCount[0] = touchCount[0] + 1;
             if (touchCount[0] == 3) {
-                startActivity(new Intent(NatashaIntro.this, Main_Menu.class));//When button is touched, it will take you to the next character
+                startActivity(new Intent(NatashaIntro.this, LoadingScreen.class));//When button is touched, it will take you to the next character
                 overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
                 soundeffect.setVolume(100,100);
                 soundeffect.start();
