@@ -17,7 +17,7 @@ import com.example.group5_decisionbasedgame.controller.FactRandomizer;
 
 public class LoadingScreen extends AppCompatActivity {
     ImageView background;
-   public TextView txtFact, txtaboveFact;
+   public TextView txtFact;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,16 +26,14 @@ public class LoadingScreen extends AppCompatActivity {
         setContentView(R.layout.activity_loadingscreen);
         background = findViewById(R.id.bgImage);
         txtFact = findViewById(R.id.txtFact);
-        txtaboveFact = findViewById(R.id.txtaboveFact);
 
         BackgroundRandomizer.RandomBG(background);
         FactRandomizer.RandomFact(txtFact);
-        txtFact.animate().alpha(0f).setDuration(12000);
-        txtaboveFact.animate().alpha(1f);
+        txtFact.animate().alpha(0f).setDuration(11000);
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
-            startActivity(new Intent(LoadingScreen.this, Main_Menu.class));
+            startActivity(new Intent(LoadingScreen.this, FirstScene.class));
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-        }, 15000);//when 12 seconds of text animation is done, 3 seconds for hold and it will take the user to the next activity. (15 seconds total)
+        }, 12000);//when 11 seconds of text animation is done, 1 second for hold and it will take the user to the next activity. (12 seconds total)
     }
 
     private void enableFullscreen() {

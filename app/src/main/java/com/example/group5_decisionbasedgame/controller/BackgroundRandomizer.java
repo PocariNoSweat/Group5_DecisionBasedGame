@@ -10,9 +10,9 @@ public class BackgroundRandomizer {
 
 public BackgroundRandomizer(){}
 
-    public static void nxtBg1(ImageView background) { background.setImageResource(R.drawable.background1); }
-    public static void nxtBg2(ImageView background) { background.setImageResource(R.drawable.background2); }
-    public static void nxtBg3(ImageView background) { background.setImageResource(R.drawable.background3); }
+    public static void nxtBg1(ImageView background) { background.setImageResource(R.drawable.background1v1); }
+    public static void nxtBg2(ImageView background) { background.setImageResource(R.drawable.background2v1); }
+    public static void nxtBg3(ImageView background) { background.setImageResource(R.drawable.background3v1); }
 
     //background randomizer for loading screens
     public static void RandomBG (ImageView background) {
