@@ -11,14 +11,14 @@ public class LoadingScreenTexts {
    static String fact6 = "Alex is capable of leading a group of people as he is used to be a leader of a protest group.";
    static String fact7 = "Alex's full name is Alexander Fiddleston.";
    static String fact8 = "A friend of one of the developers has an arrest warrant. Sheesh.";
-   static String fact9 = "Toni's full name is Antonella Belinelli";
+   static String fact9 = "Toni's full name is Antonia Belinelli";
    static String fact10 = "Toni is a daughter of an Italian mobster daughter.";
    static String fact11 = "Toni has a talent for mechanic.";
    static String fact12 = "Toni has a laid-back and friendly personality.";
    static String fact13 = "Mitsuo is an ethnocentric person.";
    static String fact14 = "If you are an introverted person, you will get along with Mitsuo as he is an introvert too!";
    static String fact15 = "The names of the character is based on a group of friends in real life.";
-   static String fact16 = "Mitsuo used to live in Okaya,Japan.";
+   static String fact16 = "Mitsuo used to live in Okaya, Japan.";
    static String fact17 = "Be careful who you tell your secrets to!";
    static String fact18 = "Mitsuo's full name is Mitsuo Enatsu.";
    static String fact19 = "Natasha's full name is Natasha Kirilenko.";
