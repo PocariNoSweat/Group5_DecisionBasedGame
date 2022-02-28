@@ -56,9 +56,7 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
 
         Button btnback = findViewById(R.id.btnback);
         btnback.setOnClickListener(this);
-
     }
-
     @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
@@ -108,8 +106,6 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
                 if (txtlogsettings.getVisibility() == View.VISIBLE) {
                     txtlogsettings.setVisibility(View.GONE);//remove "LANGUAGE APPLIED" text when clicking on another button
                 }
-
-
                 builder = new AlertDialog.Builder(Settings.this);
                 builder.setCancelable(true);
                 builder.setTitle("Information");
@@ -138,10 +134,8 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
                 });
                 builder.show();
                 break;
-
         }
     }
-
     private void enableFullscreen() {
         View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility(

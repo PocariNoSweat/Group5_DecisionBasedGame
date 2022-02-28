@@ -5,6 +5,8 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,6 +16,7 @@ import com.example.group5_decisionbasedgame.R;
 
 public class LeRodgeIntro extends AppCompatActivity {
     MediaPlayer soundeffect;
+    Animation blinkanim;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,24 +28,22 @@ public class LeRodgeIntro extends AppCompatActivity {
         TextView txt = findViewById(R.id.touchscreen);
         ImageView lerodgeid = findViewById(R.id.lerodgeid);
         soundeffect = MediaPlayer.create(this, R.raw.pageturnsoundeffect);
+        blinkanim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.blinkanimation);
 
         final AlphaAnimation fadeIn = new AlphaAnimation(0.0f, 1.0f);
-        final AlphaAnimation fadeintxt = new AlphaAnimation(0.0f, 1.0f);
         final AlphaAnimation hideElement = new AlphaAnimation(0.0f, 1.0f);
         //touch count
         final int[] touchCount = {0};
 
         hideElement.setDuration(0);
         hideElement.setFillAfter(true);
-        fadeintxt.setDuration(10000);
-        fadeintxt.setFillAfter(true);
         fadeIn.setDuration(2000);
         fadeIn.setFillAfter(true);
         //1st animation
         txt.startAnimation(hideElement);
         lerodgeid.startAnimation(hideElement);
         //2nd animation
-        txt.startAnimation(fadeintxt);
+        txt.startAnimation(blinkanim);
         lerodgeid.startAnimation(fadeIn);
         //close (for cleaning purpose)
 

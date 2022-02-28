@@ -5,6 +5,8 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,6 +17,7 @@ import com.example.group5_decisionbasedgame.R;
     public class ToniIntro extends AppCompatActivity {
 
         MediaPlayer soundeffect;
+        Animation blinkanim;
 
 
         @Override
@@ -27,10 +30,10 @@ import com.example.group5_decisionbasedgame.R;
             TextView txt = findViewById(R.id.touchscreen);
             ImageView toniid = findViewById(R.id.toniid);
             soundeffect = MediaPlayer.create(this, R.raw.pageturnsoundeffect);
+            blinkanim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.blinkanimation);
 
 
             final AlphaAnimation fadeIn = new AlphaAnimation(0.0f, 1.0f);
-            final AlphaAnimation fadeintxt = new AlphaAnimation(0.0f, 1.0f);
             final AlphaAnimation hideElement = new AlphaAnimation(1.0f, 0.0f);
             //touch count
             final int[] touchCount = {0};
@@ -38,15 +41,13 @@ import com.example.group5_decisionbasedgame.R;
             //animations and durations
             hideElement.setDuration(0);
             hideElement.setFillAfter(true);
-            fadeintxt.setDuration(10000);
-            fadeintxt.setFillAfter(true);
             fadeIn.setDuration(2000);
             fadeIn.setFillAfter(true);
 
             txt.startAnimation(hideElement);
             toniid.startAnimation(hideElement);
 
-            txt.startAnimation(fadeintxt);
+            txt.startAnimation(blinkanim);
             toniid.startAnimation(fadeIn);
             //close (for cleaning purpose)
 

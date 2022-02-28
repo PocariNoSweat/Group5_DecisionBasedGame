@@ -1,19 +1,30 @@
 package com.example.group5_decisionbasedgame.controller;
-import android.widget.TextView;
-
 import com.example.group5_decisionbasedgame.model.LoadingScreenTexts;
 
 import java.util.Random;
 
-public class FactRandomizer extends LoadingScreenTexts{
+import android.widget.TextView;
 
-    TextView txtFact;
+public class FactRandomizer {
 
     public FactRandomizer() {
+        new LoadingScreenTexts();
+    }
+    public static void RandomFact(TextView txtFact) {
 
-            Random randomizer = new Random();
-            byte seed = (byte) randomizer.nextInt(4);
+        Random randomizer = new Random();
+        byte seed = (byte) randomizer.nextInt(4);
 
-
-            }
+        switch (seed) {
+            case 0:
+                txtFact.setText(LoadingScreenTexts.getfact1()); break;
+            case 1:
+                txtFact.setText(LoadingScreenTexts.getfact2()); break;
+            case 2:
+                txtFact.setText(LoadingScreenTexts.getfact3()); break;
+            case 3:
+                txtFact.setText(LoadingScreenTexts.getfact4()); break;
         }
+    }
+}
+

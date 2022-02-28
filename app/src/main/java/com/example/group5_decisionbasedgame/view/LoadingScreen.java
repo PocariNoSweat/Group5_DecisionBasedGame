@@ -1,5 +1,6 @@
 package com.example.group5_decisionbasedgame.view;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -28,10 +29,9 @@ public class LoadingScreen extends AppCompatActivity {
         txtaboveFact = findViewById(R.id.txtaboveFact);
 
         BackgroundRandomizer.RandomBG(background);
-
+        FactRandomizer.RandomFact(txtFact);
         txtFact.animate().alpha(0f).setDuration(12000);
         txtaboveFact.animate().alpha(1f);
-
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
             startActivity(new Intent(LoadingScreen.this, Main_Menu.class));
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);

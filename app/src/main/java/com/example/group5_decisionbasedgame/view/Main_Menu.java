@@ -37,9 +37,7 @@ public class Main_Menu extends AppCompatActivity implements View.OnClickListener
 
         Button btn4 = findViewById(R.id.btn4);
         btn4.setOnClickListener(this);
-
     }
-
     @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
@@ -58,11 +56,8 @@ public class Main_Menu extends AppCompatActivity implements View.OnClickListener
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 MainMenu_music.stop();
                 break;
-
-
         }
     }
-
     private void enableFullscreen() {
         View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility(

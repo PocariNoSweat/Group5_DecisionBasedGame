@@ -1,13 +1,14 @@
 package com.example.group5_decisionbasedgame.view;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import com.example.group5_decisionbasedgame.R;
@@ -16,6 +17,7 @@ public class Intro extends AppCompatActivity {
     private final Handler mHideHandler = new Handler();
     private View mContentView;
     private TextView txt1, txt2, txt3, txt4;
+    Animation blinkanim;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -30,6 +32,7 @@ public class Intro extends AppCompatActivity {
         txt2 = findViewById(R.id.txtsplash2);
         txt3 = findViewById(R.id.txtsplash3);
         txt4 = findViewById(R.id.txtsplash4);
+        blinkanim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.blinkanimation);
 
         final AlphaAnimation fadeIn = new AlphaAnimation(0.0f , 1.0f ) ;
         final AlphaAnimation fadeOut = new AlphaAnimation( 1.0f , 0.0f ) ;
@@ -39,9 +42,9 @@ public class Intro extends AppCompatActivity {
         hideElement.setDuration(0);
         hideElement.setFillAfter(true);
         hideElement.setStartOffset(fadeIn.getStartOffset());
-        fadeIn.setDuration(3000);
+        fadeIn.setDuration(6000);
         fadeIn.setFillAfter(true);
-        fadeOut.setDuration(3000);
+        fadeOut.setDuration(1000);
         fadeOut.setFillAfter(true);
         fadeOut.setStartOffset(fadeIn.getStartOffset());
 
@@ -57,7 +60,7 @@ public class Intro extends AppCompatActivity {
         mHideHandler.postDelayed(() -> {
             txt1.startAnimation(fadeOut);
             txt2.startAnimation(fadeOut);
-            txt3.startAnimation(fadeIn);
+            txt3.startAnimation(blinkanim);
             txt4.startAnimation(fadeIn);
 
             mContentView.setOnTouchListener((view, motionEvent) -> {

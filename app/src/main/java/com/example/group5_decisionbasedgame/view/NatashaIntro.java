@@ -5,6 +5,8 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -16,6 +18,7 @@ import com.example.group5_decisionbasedgame.R;
 public class NatashaIntro extends AppCompatActivity implements View.OnClickListener{
 
     MediaPlayer soundeffect;
+    Animation blinkanim;
 
 
     @Override
@@ -31,10 +34,10 @@ public class NatashaIntro extends AppCompatActivity implements View.OnClickListe
         Button btnback = findViewById(R.id.btnback);
         btnback.setOnClickListener(this);
         soundeffect = MediaPlayer.create(this, R.raw.pageturnsoundeffect);
+        blinkanim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.blinkanimation);
 
 
         final AlphaAnimation fadeIn = new AlphaAnimation(0.0f, 1.0f);
-        final AlphaAnimation fadeintxt = new AlphaAnimation(0.0f, 1.0f);
         final AlphaAnimation hideElement = new AlphaAnimation(1.0f, 0.0f);
         //touch count
         final int[] touchCount = {0};
@@ -42,15 +45,13 @@ public class NatashaIntro extends AppCompatActivity implements View.OnClickListe
         //animations and durations
         hideElement.setDuration(0);
         hideElement.setFillAfter(true);
-        fadeintxt.setDuration(10000);
-        fadeintxt.setFillAfter(true);
         fadeIn.setDuration(2000);
         fadeIn.setFillAfter(true);
 
         txt.startAnimation(hideElement);
         natashaid.startAnimation(hideElement);
 
-        txt.startAnimation(fadeintxt);
+        txt.startAnimation(blinkanim);
         natashaid.startAnimation(fadeIn);
         //close (for cleaning purpose)
 
@@ -58,7 +59,7 @@ public class NatashaIntro extends AppCompatActivity implements View.OnClickListe
             touchCount[0] = touchCount[0] + 1;
             if (touchCount[0] == 3) {
                 startActivity(new Intent(NatashaIntro.this, LoadingScreen.class));//When button is touched, it will take you to the next character
-                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.fade_out);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 soundeffect.setVolume(100,100);
                 soundeffect.start();
             }
