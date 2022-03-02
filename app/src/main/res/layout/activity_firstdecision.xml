@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background1stsceneedit"
+    android:clickable="true">
+
+    <TextView
+        android:id="@+id/txtscenario"
+        android:layout_width="500sp"
+        android:layout_height="100sp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@raw/adam"
+        android:text="@string/firstdecision"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtdecision1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:clickable="true"
+        android:fontFamily="@raw/adam"
+        android:text="Ignore the scratch and pretend it's nothing."
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtscenario" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="10sp"
+        android:layout_height="10sp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtdecision1"
+        app:layout_constraintEnd_toStartOf="@+id/txtdecision1"
+        app:layout_constraintTop_toTopOf="@+id/txtdecision1"
+        app:srcCompat="@drawable/circle" />
+
+    <TextView
+        android:id="@+id/txtdecision2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:fontFamily="@raw/adam"
+        android:text="Hide the scratch."
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/txtdecision1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtdecision1"
+        app:layout_constraintTop_toBottomOf="@+id/txtdecision1" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="10sp"
+        android:layout_height="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtdecision2"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/txtdecision2"
+        app:srcCompat="@drawable/circle" />
+
+    <TextView
+        android:id="@+id/txtdecision3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@raw/adam"
+        android:text="Push the old man away and inspect the scratch."
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/txtdecision2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtdecision2"
+        app:layout_constraintTop_toBottomOf="@+id/txtdecision2" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="10sp"
+        android:layout_height="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtdecision3"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/txtdecision3"
+        app:srcCompat="@drawable/circle" />
+
+    <TextView
+        android:id="@+id/txtdecision4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:fontFamily="@raw/adam"
+        android:text="Blame the group for helping the old man."
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/txtdecision3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtdecision3"
+        app:layout_constraintTop_toBottomOf="@+id/txtdecision3" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="10sp"
+        android:layout_height="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtdecision4"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/txtdecision4"
+        app:srcCompat="@drawable/circle" />
+    <Button
+        android:id="@+id/btnpause"
+        android:layout_width="60sp"
+        android:layout_height="30sp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:text="Pause"
+        android:fontFamily="@raw/notepad"
+        android:textColor="#7e7b79"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:backgroundTint="#FAFDF3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

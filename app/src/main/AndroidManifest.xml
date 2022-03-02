@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.group5_decisionbasedgame">
-
     <application
         android:allowBackup="true"
         android:label="@string/app_name"
@@ -37,6 +36,11 @@
             android:screenOrientation="landscape" />
         <activity android:name=".view.FirstScene"
             android:screenOrientation="landscape" />
+        <activity android:name=".view.Ending1"
+            android:screenOrientation="landscape" />
+        <activity android:name=".view.Credits"
+            android:screenOrientation="landscape" />
+        <activity android:name=".view.FirstDecision"
+            android:screenOrientation="landscape" />
     </application>
-
 </manifest>

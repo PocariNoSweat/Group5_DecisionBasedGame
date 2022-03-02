@@ -1,6 +1,6 @@
 package com.example.group5_decisionbasedgame.view;
 
-import static com.example.group5_decisionbasedgame.controller.MusicRandomizer.MainMenu_music;
+import static com.example.group5_decisionbasedgame.controller.MainMenuBGMRandomizer.MainMenu_music;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -11,7 +11,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.group5_decisionbasedgame.R;
-import com.example.group5_decisionbasedgame.controller.MusicRandomizer;
+import com.example.group5_decisionbasedgame.controller.MainMenuBGMRandomizer;
 
 public class Main_Menu extends AppCompatActivity implements View.OnClickListener {
 
@@ -23,7 +23,7 @@ public class Main_Menu extends AppCompatActivity implements View.OnClickListener
 
         //media player
 
-        MusicRandomizer.MainMenuMusic(this);
+        MainMenuBGMRandomizer.MainMenuMusic(this);
 
         //button IDs and listeners
         Button btn1 = findViewById(R.id.btn1);
@@ -56,6 +56,11 @@ public class Main_Menu extends AppCompatActivity implements View.OnClickListener
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 MainMenu_music.stop();
                 break;
+
+            case R.id.btn4:
+                startActivity(new Intent(Main_Menu.this, Credits.class));//When button is touched, it will take you to the settings
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                MainMenu_music.stop();
         }
     }
     private void enableFullscreen() {
