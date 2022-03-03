@@ -1,7 +1,12 @@
 package com.example.group5_decisionbasedgame.view;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -14,11 +19,19 @@ public class FirstDecision extends AppCompatActivity implements View.OnClickList
 
     TextView txtdecision1, txtdecision2, txtdecision3, txtdecision4, txtscenario;
     Button btnpause;
+    MediaPlayer bgm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         enableFullscreen();
         setContentView(R.layout.activity_firstdecision);
+
+        //music
+        bgm = MediaPlayer.create(this, R.raw.firstdecisionbgm);
+        bgm.setLooping(true);
+        bgm.setVolume(100, 100);
+        bgm.start();
+
 
         //IDs and Listeners
         txtdecision1 = findViewById(R.id.txtdecision1);
@@ -37,6 +50,16 @@ public class FirstDecision extends AppCompatActivity implements View.OnClickList
 
         btnpause = findViewById(R.id.btnpause);
         btnpause.setOnClickListener(this);
+
+        //text color
+        String text = "As they wander around, they see an old man asking for help. The group of friends rushed to help the old man. Little do they know the old man was terribly sick and scratched one of them. What should they do?";
+        SpannableString ss = new SpannableString(text);
+        ForegroundColorSpan fcsWhite = new ForegroundColorSpan(Color.WHITE);
+        ForegroundColorSpan fcsRed = new ForegroundColorSpan(Color.RED);
+
+        ss.setSpan(fcsWhite, 0, 185, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ss.setSpan(fcsRed, 186, 206, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        txtscenario.setText(ss);
     }
     @Override
     public void onClick(View v) {
@@ -44,6 +67,14 @@ public class FirstDecision extends AppCompatActivity implements View.OnClickList
             case R.id.txtdecision1:
                 startActivity(new Intent(FirstDecision.this, Ending1.class));
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                bgm.stop();
+                break;
+            case R.id.txtdecision2:
+                break;
+            case R.id.txtdecision3:
+                break;
+            case R.id.txtdecision4:
+                break;
         }
     }
     private void enableFullscreen() {
