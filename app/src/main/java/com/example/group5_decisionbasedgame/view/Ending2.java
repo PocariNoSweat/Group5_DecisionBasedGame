@@ -16,7 +16,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.group5_decisionbasedgame.R;
 import com.example.group5_decisionbasedgame.controller.EndingBGMRandomizer;
 
-public class Ending1 extends AppCompatActivity implements View.OnClickListener {
+public class Ending2 extends AppCompatActivity implements View.OnClickListener {
+
     TextView txtending;
     Button btnmainmenu, btnagain, btnload;
 
@@ -24,11 +25,10 @@ public class Ending1 extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         enableFullscreen();
-        setContentView(R.layout.activity_1stending);
+        setContentView(R.layout.activity_2ndending);
 
         //Media Player
         EndingBGMRandomizer.EndingMusic(this);
-
 
         //IDs and Listeners
         btnagain = findViewById(R.id.btnagain);
@@ -50,7 +50,7 @@ public class Ending1 extends AppCompatActivity implements View.OnClickListener {
 
         switch (v.getId()) {
             case R.id.btnagain:
-                AlertDialog.Builder builder = new AlertDialog.Builder(Ending1.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(Ending2.this);
                 builder.setCancelable(true);
                 builder.setTitle("Attention!");
                 builder.setMessage("Do you wish to restart the game?");
@@ -64,7 +64,7 @@ public class Ending1 extends AppCompatActivity implements View.OnClickListener {
                 builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        startActivity(new Intent(Ending1.this, LoadingScreen.class));
+                        startActivity(new Intent(Ending2.this, LoadingScreen.class));
                         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                         EndingBGM.stop();
                     }
@@ -73,7 +73,7 @@ public class Ending1 extends AppCompatActivity implements View.OnClickListener {
                 break;
 
             case R.id.btnmainmenu:
-                builder = new AlertDialog.Builder(Ending1.this);
+                builder = new AlertDialog.Builder(Ending2.this);
                 builder.setCancelable(true);
                 builder.setTitle("Attention!");
                 builder.setMessage("Do you wish to return to the main menu? You will lose all your progress.");
@@ -87,7 +87,7 @@ public class Ending1 extends AppCompatActivity implements View.OnClickListener {
                 builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        startActivity(new Intent(Ending1.this, Main_Menu.class));
+                        startActivity(new Intent(Ending2.this, Main_Menu.class));
                         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                         EndingBGM.stop();
                     }
@@ -95,13 +95,12 @@ public class Ending1 extends AppCompatActivity implements View.OnClickListener {
                 builder.show();
                 break;
             case R.id.btnload:
-                startActivity(new Intent(Ending1.this, LoadingScreen.class));//not finished
+                startActivity(new Intent(Ending2.this, LoadingScreen.class));//not finished
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 EndingBGM.stop();
                 break;
         }
     }
-
     private void enableFullscreen(){
         View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility(

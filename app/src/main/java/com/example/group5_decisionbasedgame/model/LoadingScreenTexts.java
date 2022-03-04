@@ -29,8 +29,13 @@ public class LoadingScreenTexts {
    static String fact24 = "LeRodge's full name is LeRodge Britanni.";
    static String fact25 = "LeRodge is from Liverpool, England. He is a son of a professor.";
    static String fact26 = "I am the youngest in the group! Also the most terrified one. - LeRodge";
-   static String fact27 = "I wouldn't trust LeRodge with any decisions. Sometimes he is right.";
+   static String fact27 = "I wouldn't trust LeRodge with any decisions. Sometimes he is right though.";
    static String fact28 = "I have a telegram account. Just PM me on Facebook. - Myk Palado";
+   static String fact29 = "Bryan's full name is Bryan Garnett.";
+   static String fact30 = "Bryan has a medical background on Neurosurgery.";
+   static String fact31 = "There's an error in Bryan's ID. It should be Indecisive, not Undecisive. We apologize for that. - Developers";
+   static String fact32 = " I decided to travel the world after earning a lot of money - Bryan";
+   static String fact33 = "The languages setting does not work.";
 
 
    public LoadingScreenTexts() {}
@@ -62,4 +67,9 @@ public class LoadingScreenTexts {
    public static String getfact26() { return fact26; }
    public static String getfact27() { return fact27; }
    public static String getfact28() { return fact28; }
+   public static String getfact29() { return fact29; }
+   public static String getfact30() { return fact30; }
+   public static String getfact31() { return fact31; }
+   public static String getfact32() { return fact32; }
+   public static String getfact33() { return fact33; }
 }

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background1stsceneedit">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background1stsceneedit"
+    >
 
     <TextView
         android:id="@+id/txtscenario"
@@ -26,7 +27,7 @@
         android:layout_marginTop="48dp"
         android:clickable="true"
         android:fontFamily="@raw/adam"
-        android:text="Ignore the scratch and pretend it's nothing."
+        android:text="Yes"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -52,7 +53,7 @@
         android:layout_marginTop="20dp"
         android:clickable="true"
         android:fontFamily="@raw/adam"
-        android:text="Hide the scratch."
+        android:text="No"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/txtdecision1"
         app:layout_constraintHorizontal_bias="0.0"
@@ -75,7 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="@raw/adam"
-        android:text="Push the old man away and inspect the scratch."
+        android:text="Tell Mitsuo"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/txtdecision2"
         app:layout_constraintHorizontal_bias="0.0"
@@ -99,7 +100,7 @@
         android:layout_marginTop="20dp"
         android:clickable="true"
         android:fontFamily="@raw/adam"
-        android:text="Blame the group for helping the old man."
+        android:text="Tell Alex"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/txtdecision3"
         app:layout_constraintHorizontal_bias="0.0"

@@ -13,7 +13,7 @@ public class FactRandomizer {
     public static void RandomFact(TextView txtFact) {
 
         Random randomizer = new Random();
-        byte seed = (byte) randomizer.nextInt(28);
+        byte seed = (byte) randomizer.nextInt(33);
 
         switch (seed) {
             case 0:
@@ -72,6 +72,16 @@ public class FactRandomizer {
                 txtFact.setText(LoadingScreenTexts.getfact27()); break;
             case 27:
                 txtFact.setText(LoadingScreenTexts.getfact28()); break;
+            case 28:
+                txtFact.setText(LoadingScreenTexts.getfact29()); break;
+            case 29:
+                txtFact.setText(LoadingScreenTexts.getfact30()); break;
+            case 30:
+                txtFact.setText(LoadingScreenTexts.getfact31()); break;
+            case 31:
+                txtFact.setText(LoadingScreenTexts.getfact32()); break;
+            case 32:
+                txtFact.setText(LoadingScreenTexts.getfact33()); break;
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.example.group5_decisionbasedgame.view;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -15,16 +16,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.group5_decisionbasedgame.R;
 
-public class FirstDecision extends AppCompatActivity implements View.OnClickListener {
+public class Scene2BlameOldManScenario extends AppCompatActivity implements View.OnClickListener {
 
     TextView txtdecision1, txtdecision2, txtdecision3, txtdecision4, txtscenario;
     Button btnpause;
     MediaPlayer bgm;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         enableFullscreen();
-        setContentView(R.layout.activity_firstdecision);
+        setContentView(R.layout.activity_scene2blameoldmanscenario);
 
         //music
         bgm = MediaPlayer.create(this, R.raw.firstdecisionbgm);
@@ -52,31 +54,34 @@ public class FirstDecision extends AppCompatActivity implements View.OnClickList
         btnpause.setOnClickListener(this);
 
         //text color
-        String text = "As they wander around, they see an old man asking for help. The group of friends rushed to help the old man. Little do they know the old man was terribly sick and scratched one of them. What should they do?";
+        String text = "Should Toni reveal her scratch?";
         SpannableString ss = new SpannableString(text);
         ForegroundColorSpan fcsWhite = new ForegroundColorSpan(Color.WHITE);
         ForegroundColorSpan fcsRed = new ForegroundColorSpan(Color.RED);
 
-        ss.setSpan(fcsWhite, 0, 185, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        ss.setSpan(fcsRed, 186, 206, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ss.setSpan(fcsWhite, 0, 21, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ss.setSpan(fcsRed, 22, 30, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         txtscenario.setText(ss);
+
     }
+
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.txtdecision1:
-                startActivity(new Intent(FirstDecision.this, Ending1.class));
+                startActivity(new Intent(Scene2BlameOldManScenario.this, Ending1.class));//TODO needs to be changed
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 bgm.stop();
                 break;
             case R.id.txtdecision2:
                 break;
             case R.id.txtdecision3:
-                break;
-            case R.id.txtdecision4:
-                startActivity(new Intent(FirstDecision.this, Scene2BlameOldMan.class));
+                startActivity(new Intent(Scene2BlameOldManScenario.this, Scene3TellMitsuo.class));//TODO needs to be changed
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 bgm.stop();
+                break;
+            case R.id.txtdecision4:
                 break;
         }
     }

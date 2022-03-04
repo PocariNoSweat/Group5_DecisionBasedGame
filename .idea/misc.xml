@@ -11,6 +11,7 @@
         <entry key="..\:/Users/Uncle Groot/Group5_DecisionBasedGame/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3165" />
         <entry key="..\:/Users/Uncle Groot/Group5_DecisionBasedGame/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.274" />
         <entry key="..\:/Users/Uncle Groot/Group5_DecisionBasedGame/app/src/main/res/layout/activity_1stending.xml" value="0.5" />
+        <entry key="..\:/Users/Uncle Groot/Group5_DecisionBasedGame/app/src/main/res/layout/activity_2ndending.xml" value="0.5" />
         <entry key="..\:/Users/Uncle Groot/Group5_DecisionBasedGame/app/src/main/res/layout/activity_alexintro.xml" value="0.33" />
         <entry key="..\:/Users/Uncle Groot/Group5_DecisionBasedGame/app/src/main/res/layout/activity_bryan.xml" value="0.31354166666666666" />
         <entry key="..\:/Users/Uncle Groot/Group5_DecisionBasedGame/app/src/main/res/layout/activity_bryanintro.xml" value="0.27116402116402116" />
@@ -27,6 +28,13 @@
         <entry key="..\:/Users/Uncle Groot/Group5_DecisionBasedGame/app/src/main/res/layout/activity_mitsuointro.xml" value="0.3203125" />
         <entry key="..\:/Users/Uncle Groot/Group5_DecisionBasedGame/app/src/main/res/layout/activity_natashaintro.xml" value="0.3203125" />
         <entry key="..\:/Users/Uncle Groot/Group5_DecisionBasedGame/app/src/main/res/layout/activity_pausebutton.xml" value="0.33" />
+        <entry key="..\:/Users/Uncle Groot/Group5_DecisionBasedGame/app/src/main/res/layout/activity_scene2decision4.xml" value="0.5" />
+        <entry key="..\:/Users/Uncle Groot/Group5_DecisionBasedGame/app/src/main/res/layout/activity_scene2decision4decision.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/Uncle Groot/Group5_DecisionBasedGame/app/src/main/res/layout/activity_scene3decision3.xml" value="0.5" />
+        <entry key="..\:/Users/Uncle Groot/Group5_DecisionBasedGame/app/src/main/res/layout/activity_scene3decision3decision.xml" value="0.32447916666666665" />
+        <entry key="..\:/Users/Uncle Groot/Group5_DecisionBasedGame/app/src/main/res/layout/activity_scene3tellmitsuo.xml" value="0.38492063492063494" />
+        <entry key="..\:/Users/Uncle Groot/Group5_DecisionBasedGame/app/src/main/res/layout/activity_scene3tellmitsuoscenario.xml" value="0.32447916666666665" />
+        <entry key="..\:/Users/Uncle Groot/Group5_DecisionBasedGame/app/src/main/res/layout/activity_scene4tmyes.xml" value="0.5" />
         <entry key="..\:/Users/Uncle Groot/Group5_DecisionBasedGame/app/src/main/res/layout/activity_settings.xml" value="0.33" />
         <entry key="..\:/Users/Uncle Groot/Group5_DecisionBasedGame/app/src/main/res/layout/activity_toniintro.xml" value="0.31354166666666666" />
         <entry key="..\:/Users/Uncle Groot/Group5_DecisionBasedGame/app/src/main/res/layout/test.xml" value="0.5541666666666667" />

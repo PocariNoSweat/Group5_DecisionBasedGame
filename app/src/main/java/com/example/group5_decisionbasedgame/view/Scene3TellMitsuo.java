@@ -1,5 +1,6 @@
 package com.example.group5_decisionbasedgame.view;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -11,25 +12,27 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.example.group5_decisionbasedgame.R;
-import com.example.group5_decisionbasedgame.controller.FirstSceneDlgFlow;
+import com.example.group5_decisionbasedgame.controller.Scene3TellMitsuo3DlgFlow;
 import com.example.group5_decisionbasedgame.model.ScenarioDialogues;
 
-public class FirstScene extends AppCompatActivity implements View.OnClickListener {
+public class Scene3TellMitsuo extends AppCompatActivity implements View.OnClickListener {
 
     Button btnnextdlg, btnsavegame, btnskipdlg, btnpause;
     TextView txtdlg, txtname;
-    FirstSceneDlgFlow kenjigwapo;
+    Scene3TellMitsuo3DlgFlow kenjigwapo;
     ScenarioDialogues next;
     MediaPlayer bgm;
     ImageView imgAlex, imgBryan, imgToni, imgLeRodge, imgNatasha, imgMitsuo;
+    ConstraintLayout scene3decision3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         enableFullscreen();
-        setContentView(R.layout.activity_firstscene);
+        setContentView(R.layout.activity_scene3tellmitsuo);
 
         //music
         bgm = MediaPlayer.create(this, R.raw.firstscenebgm);
@@ -57,12 +60,14 @@ public class FirstScene extends AppCompatActivity implements View.OnClickListene
         txtdlg = findViewById(R.id.txtdlg);
         txtname = findViewById(R.id.txtname);
 
-        kenjigwapo = new FirstSceneDlgFlow();
+        kenjigwapo = new Scene3TellMitsuo3DlgFlow();
         next = new ScenarioDialogues();
+        scene3decision3 = findViewById(R.id.scene3decision3);
 
-        FirstSceneDlgFlow.firstscene(txtdlg, txtname, next, kenjigwapo);
+        Scene3TellMitsuo3DlgFlow.thirdscene(txtdlg, txtname, next, kenjigwapo);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
@@ -71,15 +76,15 @@ public class FirstScene extends AppCompatActivity implements View.OnClickListene
                     next.setnextdlg(1);
                 }else{
                     next.setnextdlg(next.getnextdlg() + 1);}
-                    kenjigwapo.nextdlg(txtdlg, txtname, next, imgAlex, imgLeRodge, imgToni, imgBryan, imgNatasha, imgMitsuo);
-                if (next.getnextdlg()==40) {
-                    startActivity(new Intent(FirstScene.this, FirstDecision.class));
+                kenjigwapo.nextdlg(txtdlg, txtname, next, imgAlex, imgLeRodge, imgToni, imgBryan, imgNatasha, imgMitsuo, scene3decision3);
+                if (next.getnextdlg()==24) {
+                    startActivity(new Intent(Scene3TellMitsuo.this, Scene3TellMitsuoScenario.class));
                     overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                     bgm.stop();
                 }
                 break;
             case R.id.btnskipdlg:
-                AlertDialog.Builder builder = new AlertDialog.Builder(FirstScene.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(Scene3TellMitsuo.this);
                 builder.setCancelable(true);
                 builder.setTitle("Attention!");
                 builder.setMessage("This will skip the scenario. Continue to the decisions?");
@@ -93,7 +98,7 @@ public class FirstScene extends AppCompatActivity implements View.OnClickListene
                 builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        startActivity(new Intent(FirstScene.this, FirstDecision.class));
+                        startActivity(new Intent(Scene3TellMitsuo.this, Scene3TellMitsuoScenario.class));
                         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                         bgm.stop();
                     }

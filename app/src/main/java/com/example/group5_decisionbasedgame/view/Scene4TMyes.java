@@ -1,5 +1,6 @@
 package com.example.group5_decisionbasedgame.view;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -11,31 +12,35 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.example.group5_decisionbasedgame.R;
-import com.example.group5_decisionbasedgame.controller.FirstSceneDlgFlow;
+import com.example.group5_decisionbasedgame.controller.Scene4TMyesDlgFlow;
 import com.example.group5_decisionbasedgame.model.ScenarioDialogues;
 
-public class FirstScene extends AppCompatActivity implements View.OnClickListener {
+public class Scene4TMyes extends AppCompatActivity implements View.OnClickListener {
 
     Button btnnextdlg, btnsavegame, btnskipdlg, btnpause;
     TextView txtdlg, txtname;
-    FirstSceneDlgFlow kenjigwapo;
+    Scene4TMyesDlgFlow kenjigwapo;
     ScenarioDialogues next;
-    MediaPlayer bgm;
+    MediaPlayer bgm, backpacksound, bgmtest;
     ImageView imgAlex, imgBryan, imgToni, imgLeRodge, imgNatasha, imgMitsuo;
+    ConstraintLayout Scene4TMyes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         enableFullscreen();
-        setContentView(R.layout.activity_firstscene);
+        setContentView(R.layout.activity_scene4tmyes);
 
         //music
         bgm = MediaPlayer.create(this, R.raw.firstscenebgm);
         bgm.setLooping(true);
         bgm.setVolume(100, 100);
         bgm.start();
+        bgmtest = MediaPlayer.create(this, R.raw.bgmtest);
+        backpacksound = MediaPlayer.create(this, R.raw.backpack);
 
         //IDS and Listeners
         btnnextdlg = findViewById(R.id.btnnextdlg);
@@ -57,12 +62,14 @@ public class FirstScene extends AppCompatActivity implements View.OnClickListene
         txtdlg = findViewById(R.id.txtdlg);
         txtname = findViewById(R.id.txtname);
 
-        kenjigwapo = new FirstSceneDlgFlow();
+        kenjigwapo = new Scene4TMyesDlgFlow();
         next = new ScenarioDialogues();
+        Scene4TMyes = findViewById(R.id.scene4TMyes);
 
-        FirstSceneDlgFlow.firstscene(txtdlg, txtname, next, kenjigwapo);
+        Scene4TMyesDlgFlow.fourthscene(txtdlg, txtname, next, kenjigwapo);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
@@ -71,31 +78,33 @@ public class FirstScene extends AppCompatActivity implements View.OnClickListene
                     next.setnextdlg(1);
                 }else{
                     next.setnextdlg(next.getnextdlg() + 1);}
-                    kenjigwapo.nextdlg(txtdlg, txtname, next, imgAlex, imgLeRodge, imgToni, imgBryan, imgNatasha, imgMitsuo);
-                if (next.getnextdlg()==40) {
-                    startActivity(new Intent(FirstScene.this, FirstDecision.class));
-                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                kenjigwapo.nextdlg(txtdlg, txtname, next, imgAlex, imgLeRodge, imgToni, imgBryan, imgNatasha, imgMitsuo, Scene4TMyes);
+                if (next.getnextdlg()==25) {
+                    backpacksound.start();
+                }
+                if (next.getnextdlg()==31){
                     bgm.stop();
+                }
+                if (next.getnextdlg()==33){
+                    bgmtest.start();
+                    bgm.setVolume(100, 100);
+                }
+                if (next.getnextdlg()==44) {
+                    startActivity(new Intent(Scene4TMyes.this, Ending2.class));
+                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                    bgmtest.stop();
                 }
                 break;
             case R.id.btnskipdlg:
-                AlertDialog.Builder builder = new AlertDialog.Builder(FirstScene.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(Scene4TMyes.this);
                 builder.setCancelable(true);
                 builder.setTitle("Attention!");
-                builder.setMessage("This will skip the scenario. Continue to the decisions?");
+                builder.setMessage("Skip unavailable.");
 
-                builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton("Okay", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.cancel();
-                    }
-                });
-                builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        startActivity(new Intent(FirstScene.this, FirstDecision.class));
-                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-                        bgm.stop();
                     }
                 });
                 builder.show();

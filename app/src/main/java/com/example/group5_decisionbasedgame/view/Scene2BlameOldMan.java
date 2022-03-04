@@ -13,14 +13,14 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.group5_decisionbasedgame.R;
-import com.example.group5_decisionbasedgame.controller.FirstSceneDlgFlow;
+import com.example.group5_decisionbasedgame.controller.Scene2BlameOldManDlgFlow;
 import com.example.group5_decisionbasedgame.model.ScenarioDialogues;
 
-public class FirstScene extends AppCompatActivity implements View.OnClickListener {
+public class Scene2BlameOldMan extends AppCompatActivity implements View.OnClickListener {
 
     Button btnnextdlg, btnsavegame, btnskipdlg, btnpause;
     TextView txtdlg, txtname;
-    FirstSceneDlgFlow kenjigwapo;
+    Scene2BlameOldManDlgFlow kenjigwapo;
     ScenarioDialogues next;
     MediaPlayer bgm;
     ImageView imgAlex, imgBryan, imgToni, imgLeRodge, imgNatasha, imgMitsuo;
@@ -57,10 +57,10 @@ public class FirstScene extends AppCompatActivity implements View.OnClickListene
         txtdlg = findViewById(R.id.txtdlg);
         txtname = findViewById(R.id.txtname);
 
-        kenjigwapo = new FirstSceneDlgFlow();
+        kenjigwapo = new Scene2BlameOldManDlgFlow();
         next = new ScenarioDialogues();
 
-        FirstSceneDlgFlow.firstscene(txtdlg, txtname, next, kenjigwapo);
+        Scene2BlameOldManDlgFlow.secondscene(txtdlg, txtname, next, kenjigwapo);
     }
 
     @Override
@@ -71,15 +71,15 @@ public class FirstScene extends AppCompatActivity implements View.OnClickListene
                     next.setnextdlg(1);
                 }else{
                     next.setnextdlg(next.getnextdlg() + 1);}
-                    kenjigwapo.nextdlg(txtdlg, txtname, next, imgAlex, imgLeRodge, imgToni, imgBryan, imgNatasha, imgMitsuo);
-                if (next.getnextdlg()==40) {
-                    startActivity(new Intent(FirstScene.this, FirstDecision.class));
+                kenjigwapo.nextdlg(txtdlg, txtname, next, imgAlex, imgLeRodge, imgToni, imgBryan, imgNatasha, imgMitsuo);
+                if (next.getnextdlg()==6) {
+                    startActivity(new Intent(Scene2BlameOldMan.this, Scene2BlameOldManScenario.class));
                     overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                     bgm.stop();
                 }
                 break;
             case R.id.btnskipdlg:
-                AlertDialog.Builder builder = new AlertDialog.Builder(FirstScene.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(Scene2BlameOldMan.this);
                 builder.setCancelable(true);
                 builder.setTitle("Attention!");
                 builder.setMessage("This will skip the scenario. Continue to the decisions?");
@@ -93,7 +93,7 @@ public class FirstScene extends AppCompatActivity implements View.OnClickListene
                 builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        startActivity(new Intent(FirstScene.this, FirstDecision.class));
+                        startActivity(new Intent(Scene2BlameOldMan.this, Scene2BlameOldManScenario.class));
                         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                         bgm.stop();
                     }
@@ -114,4 +114,5 @@ public class FirstScene extends AppCompatActivity implements View.OnClickListene
                         View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
         );
     }
+
 }

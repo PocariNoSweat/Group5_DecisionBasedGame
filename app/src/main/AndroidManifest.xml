@@ -42,5 +42,17 @@
             android:screenOrientation="landscape" />
         <activity android:name=".view.FirstDecision"
             android:screenOrientation="landscape" />
+        <activity android:name=".view.Scene2BlameOldManScenario"
+            android:screenOrientation="landscape" />
+        <activity android:name=".view.Scene2BlameOldMan"
+            android:screenOrientation="landscape" />
+        <activity android:name=".view.Scene3TellMitsuo"
+            android:screenOrientation="landscape" />
+        <activity android:name=".view.Scene3TellMitsuoScenario"
+            android:screenOrientation="landscape" />
+        <activity android:name=".view.Ending2"
+            android:screenOrientation="landscape" />
+        <activity android:name=".view.Scene4TMyes"
+            android:screenOrientation="landscape" />
     </application>
 </manifest>
