@@ -75,7 +75,7 @@ public class Scene2BlameOldManScenario extends AppCompatActivity implements View
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.txtdecision1:
-                startActivity(new Intent(Scene2BlameOldManScenario.this, Scene3Yes.class));//TODO needs to be changed
+                startActivity(new Intent(Scene2BlameOldManScenario.this, Scene3Yes.class));
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 bgm.stop();
                 break;

@@ -13,7 +13,7 @@ import com.example.group5_decisionbasedgame.model.MitsuoDialogue;
 import com.example.group5_decisionbasedgame.model.NatashaDialogue;
 import com.example.group5_decisionbasedgame.model.ScenarioDialogues;
 import com.example.group5_decisionbasedgame.model.ToniDialogue;
-//TODO : All pendings are character models that aren't done
+//TODO : All "//" or pendings are character models that aren't done
 public class FirstSceneDlgFlow {
     public FirstSceneDlgFlow () {
         new AlexDialogue();
