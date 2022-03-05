@@ -15,14 +15,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.example.group5_decisionbasedgame.R;
-import com.example.group5_decisionbasedgame.controller.Scene3TellMitsuo3DlgFlow;
+import com.example.group5_decisionbasedgame.controller.Scene3YesDlgFlow;
 import com.example.group5_decisionbasedgame.model.ScenarioDialogues;
 
-public class Scene3TellMitsuo extends AppCompatActivity implements View.OnClickListener {
+public class Scene3Yes extends AppCompatActivity implements View.OnClickListener {
 
     Button btnnextdlg, btnsavegame, btnskipdlg, btnpause;
     TextView txtdlg, txtname;
-    Scene3TellMitsuo3DlgFlow kenjigwapo;
+    Scene3YesDlgFlow kenjigwapo;
     ScenarioDialogues next;
     MediaPlayer bgm;
     ImageView imgAlex, imgBryan, imgToni, imgLeRodge, imgNatasha, imgMitsuo;
@@ -60,11 +60,11 @@ public class Scene3TellMitsuo extends AppCompatActivity implements View.OnClickL
         txtdlg = findViewById(R.id.txtdlg);
         txtname = findViewById(R.id.txtname);
 
-        kenjigwapo = new Scene3TellMitsuo3DlgFlow();
+        kenjigwapo = new Scene3YesDlgFlow();
         next = new ScenarioDialogues();
         dlgscene = findViewById(R.id.dlgscene);
 
-        Scene3TellMitsuo3DlgFlow.thirdscene(txtdlg, txtname, next, kenjigwapo);
+        Scene3YesDlgFlow.fourthscene(txtdlg, txtname, next, kenjigwapo);
     }
 
     @SuppressLint("NonConstantResourceId")
@@ -77,37 +77,28 @@ public class Scene3TellMitsuo extends AppCompatActivity implements View.OnClickL
                 }else{
                     next.setnextdlg(next.getnextdlg() + 1);}
                 kenjigwapo.nextdlg(txtdlg, txtname, next, imgAlex, imgLeRodge, imgToni, imgBryan, imgNatasha, imgMitsuo, dlgscene);
-                if (next.getnextdlg()==24) {
-                    startActivity(new Intent(Scene3TellMitsuo.this, Scene3TellMitsuoScenario.class));
+                if (next.getnextdlg()==49) {
+                    startActivity(new Intent(Scene3Yes.this, Ending3.class));
                     overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                     bgm.stop();
                 }
                 break;
             case R.id.btnskipdlg:
-                AlertDialog.Builder builder = new AlertDialog.Builder(Scene3TellMitsuo.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(Scene3Yes.this);
                 builder.setCancelable(true);
                 builder.setTitle("Attention!");
-                builder.setMessage("This will skip the scenario. Continue to the decisions?");
+                builder.setMessage("Skip unavailable.");
 
-                builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton("Okay", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.cancel();
-                    }
-                });
-                builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        startActivity(new Intent(Scene3TellMitsuo.this, Scene3TellMitsuoScenario.class));
-                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-                        bgm.stop();
                     }
                 });
                 builder.show();
                 break;
         }
     }
-
     private void enableFullscreen() {
         View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility(

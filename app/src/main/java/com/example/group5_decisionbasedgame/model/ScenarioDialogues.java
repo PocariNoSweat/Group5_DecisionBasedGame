@@ -13,7 +13,6 @@ public class ScenarioDialogues {
     static String txt5 = "Mitsuo laughs.";
     static String txt6 = "The three went to regroup with the others.";
     static String txt1D4 = "After helping the old man, Toni notices a scratch on her arm. She went towards the old man and interrogated him furiously.";
-    static String txt1D4_D1 = "Toni agrees for Bryan to inspect the scratch.";
     static String txtOldMan1 = "*cries* I didn't do anything!";
     static String txtOldMan2 = "Thank you...";
     //TELL MITSUO txts
@@ -38,6 +37,14 @@ public class ScenarioDialogues {
     static String txt22 = "Alex decides to run away, leaving Bryan and LeRodge behind.";
     static String txt23 = "Toni starts to act weird.";
     static String txt24 = "The group of friends continues to find for shelter and help.";
+    //YES txts
+    static String txt25 = "Toni agrees for Bryan to inspect the scratch.";
+    static String txt26 = "The group of friends walked away from the scene.";
+    static String txt27 = "You have received the following items: Inhaler, antiviral drug, water, a book about Geometry.";
+    static String txt28 = "The group of friends went back to Toni and Mitsuo.";
+    static String txt29 = "Bryan used the antiviral drug on Toni.";
+    //END OF YES txts
+
 
 
     public ScenarioDialogues () {}
@@ -50,7 +57,6 @@ public class ScenarioDialogues {
     public static String gettxt5 () { return txt5; }
     public static String gettxt6 () { return txt6; }
     public static String gettxt1D4 () { return txt1D4; }
-    public static String gettxt1D4_D1() { return txt1D4_D1; }
     public static String gettxtOldMan1() { return txtOldMan1; }
     public static String gettxtOldMan2() { return txtOldMan2; }
     public static String gettxt7() { return txt7; }
@@ -71,6 +77,11 @@ public class ScenarioDialogues {
     public static String gettxt22() { return txt22; }
     public static String gettxt23() { return txt23; }
     public static String gettxt24() { return txt24; }
+    public static String gettxt25() { return txt25; }
+    public static String gettxt26() { return txt26; }
+    public static String gettxt27() { return txt27; }
+    public static String gettxt28() { return txt28; }
+    public static String gettxt29() { return txt29; }
 
     public int getnextdlg() { return nextdlg; }
     public void setnextdlg(int nextdlg) { this.nextdlg = nextdlg; }

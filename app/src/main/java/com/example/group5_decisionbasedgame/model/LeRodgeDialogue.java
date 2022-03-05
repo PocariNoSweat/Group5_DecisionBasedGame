@@ -23,6 +23,17 @@ public class LeRodgeDialogue {
     static String txtLeRodge5 = "I did? All I remember was that everything turned dark, then I wake up in this unknown world. This place looks like the city we live in too.";
     //END OF TELL MITSUO_YES txts
 
+    //YES txts
+    static String txtLeRodge6 = "Oh no no no. So you're telling me that we are living in an unknown world and Toni got scratched by an unknown old man? I've seen this in the movies.";
+    static String txtLeRodge7 = "You don't get it, Natasha. What if it's a contagious virus? The old man is terribly sick! We're also unsure if the Corvette-19 is still a thing.";
+    static String txtLeRodge8 = "What are we waiting for? ";
+    static String txtLeRodge9 = "I don't like this. I'm feeling sick.";
+    static String txtLeRodge10 = "I found an antiviral drug! Also my beloved book.";
+    static String txtLeRodge11 = "What happened?";
+    static String txtLeRodge12 = "Mitsuo told us that you looked sick, sick like the old man last time.";
+    static String txtLeRodge13 = "Toni, are you sure that you're okay?";
+    // END OF YES txts
+
 
     public LeRodgeDialogue() {}
 
@@ -40,4 +51,12 @@ public class LeRodgeDialogue {
     public static String gettxtLeRodge3() { return txtLeRodge3; }
     public static String gettxtLeRodge4() { return txtLeRodge4; }
     public static String gettxtLeRodge5() { return txtLeRodge5; }
+    public static String gettxtLeRodge6() { return txtLeRodge6; }
+    public static String gettxtLeRodge7() { return txtLeRodge7; }
+    public static String gettxtLeRodge8() { return txtLeRodge8; }
+    public static String gettxtLeRodge9() { return txtLeRodge9; }
+    public static String gettxtLeRodge10() { return txtLeRodge10; }
+    public static String gettxtLeRodge11() { return txtLeRodge11; }
+    public static String gettxtLeRodge12() { return txtLeRodge12; }
+    public static String gettxtLeRodge13() { return txtLeRodge13; }
 }

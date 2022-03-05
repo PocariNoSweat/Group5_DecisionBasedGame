@@ -32,6 +32,16 @@ public class AlexDialogue {
     static String txtAlex11 = "Help me carry LeRodge!";
     //END OF TELL MITSUO_YES txts
 
+    //YES txts
+    static String txtAlex12 = "Toni, LeRodge might be right. If it's a contagious virus, we can't bring you with us anymore.";
+    static String txtAlex13 = "With that in mind, we should leave Toni here. We can't bring her with us unless we know she's harmless.";
+    static String txtAlex14 = "Do you want to survive? We must think ahead of ourselves.";
+    static String txtAlex15 = "Toni, stay here for a while. We'll come back.";
+    static String txtAlex16 = "Is everything alright?";
+    static String txtAlex17 = "We don't have much time, let's seek for shelter.";
+    //END OF YES txts
+
+
     public AlexDialogue () {}
 
     public static String getSC1_Alex1() { return SC1_Alex1; }
@@ -58,4 +68,10 @@ public class AlexDialogue {
     public static String gettxtAlex9() {return txtAlex9; }
     public static String gettxtAlex10() { return txtAlex10; }
     public static String gettxtAlex11() { return txtAlex11; }
+    public static String gettxtAlex12() { return txtAlex12; }
+    public static String gettxtAlex13() { return txtAlex13; }
+    public static String gettxtAlex14() { return txtAlex14; }
+    public static String gettxtAlex15() { return txtAlex15; }
+    public static String gettxtAlex16() { return txtAlex16; }
+    public static String gettxtAlex17() { return txtAlex17; }
 }

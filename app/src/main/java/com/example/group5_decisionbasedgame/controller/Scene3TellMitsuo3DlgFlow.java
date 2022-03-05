@@ -32,7 +32,7 @@ public class Scene3TellMitsuo3DlgFlow {
     }
 
     @SuppressLint("SetTextI18n")
-    public void nextdlg(TextView dlg, TextView txtname, ScenarioDialogues next, ImageView imgAlex, ImageView imgLeRodge, ImageView imgToni, ImageView imgBryan, ImageView imgNatasha, ImageView imgMitsuo, ConstraintLayout scene3decision3) {
+    public void nextdlg(TextView dlg, TextView txtname, ScenarioDialogues next, ImageView imgAlex, ImageView imgLeRodge, ImageView imgToni, ImageView imgBryan, ImageView imgNatasha, ImageView imgMitsuo, ConstraintLayout dlgscene) {
         switch (next.getnextdlg()) {
             case 1:
                 dlg.setText(ToniDialogue.gettxtToni1());
@@ -76,7 +76,7 @@ public class Scene3TellMitsuo3DlgFlow {
                 break;
             case 8:
                 dlg.setText(ScenarioDialogues.gettxt8());
-                scene3decision3.setBackgroundResource(R.drawable.backgroundscene1_2);
+                dlgscene.setBackgroundResource(R.drawable.backgroundscene1_2);
               //pending  imgMitsuo.setVisibility(View.INVISIBLE);
                 txtname.setVisibility(View.INVISIBLE);
                 break;

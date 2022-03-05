@@ -26,7 +26,7 @@ public class Scene2BlameOldManScenario extends AppCompatActivity implements View
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         enableFullscreen();
-        setContentView(R.layout.activity_scene2blameoldmanscenario);
+        setContentView(R.layout.activity_firstdecision);
 
         //music
         bgm = MediaPlayer.create(this, R.raw.firstdecisionbgm);
@@ -53,6 +53,11 @@ public class Scene2BlameOldManScenario extends AppCompatActivity implements View
         btnpause = findViewById(R.id.btnpause);
         btnpause.setOnClickListener(this);
 
+        txtdecision1.setText("YES");
+        txtdecision2.setText("NO");
+        txtdecision3.setText("TELL MITSUO");
+        txtdecision4.setText("TELL ALEX");
+
         //text color
         String text = "Should Toni reveal her scratch?";
         SpannableString ss = new SpannableString(text);
@@ -70,18 +75,24 @@ public class Scene2BlameOldManScenario extends AppCompatActivity implements View
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.txtdecision1:
-                startActivity(new Intent(Scene2BlameOldManScenario.this, Ending1.class));//TODO needs to be changed
+                startActivity(new Intent(Scene2BlameOldManScenario.this, Scene3Yes.class));//TODO needs to be changed
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 bgm.stop();
                 break;
             case R.id.txtdecision2:
+                startActivity(new Intent(Scene2BlameOldManScenario.this, Scene3No.class));
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                bgm.stop();
                 break;
             case R.id.txtdecision3:
-                startActivity(new Intent(Scene2BlameOldManScenario.this, Scene3TellMitsuo.class));//TODO needs to be changed
+                startActivity(new Intent(Scene2BlameOldManScenario.this, Scene3TellMitsuo.class));
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 bgm.stop();
                 break;
             case R.id.txtdecision4:
+                startActivity(new Intent(Scene2BlameOldManScenario.this, Scene3TellAlex.class));
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                bgm.stop();
                 break;
         }
     }

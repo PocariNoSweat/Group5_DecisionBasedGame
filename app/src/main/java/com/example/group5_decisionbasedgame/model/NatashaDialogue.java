@@ -18,6 +18,15 @@ public class NatashaDialogue {
     static String txtNatasha6 = "Hey Alex.";
     //END OF MITSUO_YES txts
 
+    //YES txts
+    static String txtNatasha7 = "Poor LeRodge, him and his conspiracies still lives within him until now.";
+    static String txtNatasha8 = "That's absurd. We can't leave her alone here with the old man.";
+    static String txtNatasha9 = "Whatever you say, Mister.";
+    static String txtNatasha10 = "It looked like you were about to turn into a zombie.";
+    //END OF YES txts
+
+
+
     public NatashaDialogue() {}
 
     public static String getSC1_Natasha1() { return SC1_Natasha1; }
@@ -29,4 +38,8 @@ public class NatashaDialogue {
     public static String gettxtNatasha4() { return txtNatasha4; }
     public static String gettxtNatasha5() { return txtNatasha5; }
     public static String gettxtNatasha6() { return txtNatasha6; }
+    public static String gettxtNatasha7() { return txtNatasha7; }
+    public static String gettxtNatasha8() { return txtNatasha8; }
+    public static String gettxtNatasha9() { return txtNatasha9; }
+    public static String gettxtNatasha10() { return txtNatasha10; }
 }

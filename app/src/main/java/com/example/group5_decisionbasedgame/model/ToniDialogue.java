@@ -26,6 +26,17 @@ public class ToniDialogue {
     static String txtToni12 = "No! I swear I'm okay";
     //END OF TELL MITSUO_YES txts
 
+    //YES txts
+    static String txtToni13 = "The old man... He scratched my arm";
+    static String txtToni14 = "That's kind of rude Mitsuo.";
+    static String txtToni15 = "Really? Just for a simple scratch I'll end up as a zombie or whatever it is";
+    static String txtToni16 = "*breathes*";
+    static String txtToni17 = "What happened?";
+    static String txtToni18 = "Are you serious?!";
+    static String txtToni19 = "Where... Where is he?";
+    static String txtToni20 = "I'm fine LeRodge. I don't even know what happened.";
+    //END OF YES txts
+
 
 
 
@@ -47,4 +58,13 @@ public class ToniDialogue {
     public static String gettxtToni10() { return txtToni10; }
     public static String gettxtToni11() { return txtToni11; }
     public static String gettxtToni12() { return txtToni12; }
+    public static String gettxtToni13() { return txtToni13; }
+    public static String gettxtToni14() { return txtToni14; }
+    public static String gettxtToni15() { return txtToni15; }
+    public static String gettxtToni16() { return txtToni16; }
+    public static String gettxtToni17() { return txtToni17; }
+    public static String gettxtToni18() { return txtToni18; }
+    public static String gettxtToni19() { return txtToni19; }
+    public static String gettxtToni20() { return txtToni20; }
+
 }

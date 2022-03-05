@@ -54,5 +54,13 @@
             android:screenOrientation="landscape" />
         <activity android:name=".view.Scene4TMyes"
             android:screenOrientation="landscape" />
+        <activity android:name=".view.Scene3No"
+            android:screenOrientation="landscape" />
+        <activity android:name=".view.Scene3TellAlex"
+            android:screenOrientation="landscape" />
+        <activity android:name=".view.Scene3Yes"
+            android:screenOrientation="landscape" />
+        <activity android:name=".view.Ending3"
+            android:screenOrientation="landscape" />
     </application>
 </manifest>

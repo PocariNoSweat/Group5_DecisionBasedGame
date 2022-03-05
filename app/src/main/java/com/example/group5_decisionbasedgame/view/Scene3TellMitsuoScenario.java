@@ -53,6 +53,11 @@ public class Scene3TellMitsuoScenario extends AppCompatActivity implements View.
         btnpause = findViewById(R.id.btnpause);
         btnpause.setOnClickListener(this);
 
+        txtdecision1.setText("YES");
+        txtdecision2.setText("YES");
+        txtdecision3.setText("YES");
+        txtdecision4.setText("YES");
+
         //text color
         String text = "Should Mitsuo tell everyone about Toni's scratch?";
         SpannableString ss = new SpannableString(text);

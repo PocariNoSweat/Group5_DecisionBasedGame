@@ -27,6 +27,16 @@ public class MitsuoDialogue {
     static String txtMitsuo11 = "I'm coming back for her, I'm really sorry everyone.";
     //END OF TELL MITSUO_YES txts
 
+    //YES txts
+    static String txtMitsuo12 = "No! I'm tired of hearing theories and myths. I know to myself that Toni knows what's best. It's just a little scratch!";
+    static String txtMitsuo13 = "As do I, LeRodge.";
+    static String txtMitsuo14 = "I'll stay with her.";
+    static String txtMitsuo15 = "Hurry! Something does not feel right about Toni.";
+    static String txtMitsuo16 = "Just hurry! She's about to faint!";
+    static String txtMitsuo17 = "He ran away when I was finding for shelter.";
+    static String txtMitsuo18 = "Phew. I thought it was the end for Toni and us";
+    //END OF YES txts
+
 
     public MitsuoDialogue() {}
 
@@ -48,4 +58,11 @@ public class MitsuoDialogue {
     public static String gettxtMitsuo9() { return txtMitsuo9; }
     public static String gettxtMitsuo10() { return txtMitsuo10; }
     public static String gettxtMitsuo11() { return txtMitsuo11; }
+    public static String gettxtMitsuo12() { return txtMitsuo12; }
+    public static String gettxtMitsuo13() { return txtMitsuo13; }
+    public static String gettxtMitsuo14() { return txtMitsuo14; }
+    public static String gettxtMitsuo15() { return txtMitsuo15; }
+    public static String gettxtMitsuo16() { return txtMitsuo16; }
+    public static String gettxtMitsuo17() { return txtMitsuo17; }
+    public static String gettxtMitsuo18() { return txtMitsuo18; }
 }
