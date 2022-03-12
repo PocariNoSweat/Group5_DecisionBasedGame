@@ -19,6 +19,36 @@ public class BryanDialogue {
     static String txtBryan9 = "Toni, Toni! Hey, we're here.";
     //END OF YES txts
 
+    //LIE txts
+    static String txtBryan10 = "Are you certain?";
+    //END OF LIE txts
+
+    //IGNORE QUES txts
+    static String txtBryan11 = "Toni?";
+    static String txtBryan12 = "I asked if you're okay.";
+    //END OF IGNORE QUES txts
+
+    //AVOID QUES txts
+    static String txtBryan13 = "Why not?";
+    //END OF AVOID QUES txts
+
+    //IGNORE SCRATCH txts
+    static String txtBryan14 = "Toni!";
+    static String txtBryan15 = "Toni, please. We're your friends!";
+    //END OF IGNORE SCRATCH txts
+
+    //TELL EVERYONE txts
+    static String txtBryan16 = "She's pale and cold!";
+    //END OF TELL EVERYONE txts
+
+    //ASK BRYAN txts
+    static String txtBryan17 = "What is it, Mitsuo?";
+    static String txtBryan18 = "Did you get scratched too?";
+    static String txtBryan19 = "It's the scratch. There must be something with it.";
+    //END OF ASK BRYAN txts
+
+
+
     public BryanDialogue() {}
 
     public static String getSC1_Bryan1() { return SC1_Bryan1; }
@@ -31,4 +61,14 @@ public class BryanDialogue {
     public static String gettxtBryan7() { return txtBryan7; }
     public static String gettxtBryan8() { return txtBryan8; }
     public static String gettxtBryan9() { return txtBryan9; }
+    public static String gettxtBryan10() { return txtBryan10; }
+    public static String gettxtBryan11() { return txtBryan11; }
+    public static String gettxtBryan12() { return txtBryan12; }
+    public static String gettxtBryan13() { return txtBryan13; }
+    public static String gettxtBryan14() { return txtBryan14; }
+    public static String gettxtBryan15() { return txtBryan15; }
+    public static String gettxtBryan16() { return txtBryan16; }
+    public static String gettxtBryan17() { return txtBryan17; }
+    public static String gettxtBryan18() { return txtBryan18; }
+    public static String gettxtBryan19() { return txtBryan19; }
 }

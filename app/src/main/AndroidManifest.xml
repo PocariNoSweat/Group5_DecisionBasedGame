@@ -62,5 +62,31 @@
             android:screenOrientation="landscape" />
         <activity android:name=".view.Ending3"
             android:screenOrientation="landscape" />
+        <activity android:name=".view.Scene2IgnoreScratch"
+            android:screenOrientation="landscape" />
+        <activity android:name=".view.Scene3Lie"
+            android:screenOrientation="landscape" />
+        <activity android:name=".view.Scene3IgnoreQues"
+            android:screenOrientation="landscape" />
+        <activity android:name=".view.Scene3AvoidQues"
+            android:screenOrientation="landscape" />
+        <activity android:name=".view.Scene3TellTruth"
+            android:screenOrientation="landscape" />
+        <activity android:name=".view.Scene3AskToni"
+            android:screenOrientation="landscape" />
+        <activity android:name=".view.Ending4"
+            android:screenOrientation="landscape" />
+        <activity android:name=".view.Scene4IgnoreScratch"
+            android:screenOrientation="landscape" />
+        <activity android:name=".view.Scene4TellEveryone"
+            android:screenOrientation="landscape" />
+        <activity android:name=".view.Scene4AskBryan"
+            android:screenOrientation="landscape" />
+        <activity android:name=".view.Scene4AskToni"
+            android:screenOrientation="landscape" />
+        <activity android:name=".view.Scene3ContinueHelp"
+            android:screenOrientation="landscape" />
+        <activity android:name=".view.Scene3ContinueHelpScenario"
+            android:screenOrientation="landscape" />
     </application>
 </manifest>

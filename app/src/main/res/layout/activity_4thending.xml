@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#0F0F0F">
+
+    <TextView
+        android:id="@+id/txtending"
+        android:layout_width="550sp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@raw/deathay"
+        android:text="One by one they express their gratitude to the old man as they leave him to die a slow and painful death."
+        android:textAlignment="center"
+        android:textColor="#85ff7a"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.218" />
+
+    <Button
+        android:id="@+id/btnagain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginBottom="92dp"
+        android:fontFamily="@raw/notepad"
+        android:text="Try again"
+        android:textColor="#515651"
+        android:textStyle="bold"
+        app:backgroundTint="#7e7b79"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnmainmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:fontFamily="@raw/notepad"
+        android:text="Back to main menu"
+        android:textColor="#515651"
+        android:textStyle="bold"
+        app:backgroundTint="#7e7b79"
+        app:layout_constraintBottom_toBottomOf="@+id/btnagain"
+        app:layout_constraintEnd_toStartOf="@+id/btnload"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btnagain" />
+
+    <Button
+        android:id="@+id/btnload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="112dp"
+        android:fontFamily="@raw/notepad"
+        android:text="Load Game"
+        android:textColor="#515651"
+        android:textStyle="bold"
+        app:backgroundTint="#7e7b79"
+        app:layout_constraintBottom_toBottomOf="@+id/btnmainmenu"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Tip: Does it have something to do with leaving your friends behind? Or trusting the wrong person?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="#515651"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

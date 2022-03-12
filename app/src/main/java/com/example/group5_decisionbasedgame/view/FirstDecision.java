@@ -65,7 +65,7 @@ public class FirstDecision extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.txtdecision1:
-                startActivity(new Intent(FirstDecision.this, Ending1.class));
+                startActivity(new Intent(FirstDecision.this, Scene2IgnoreScratch.class));
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 bgm.stop();
                 break;

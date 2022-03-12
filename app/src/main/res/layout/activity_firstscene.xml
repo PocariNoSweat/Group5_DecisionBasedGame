@@ -144,5 +144,45 @@
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/tonimodel" />
 
+    <ImageView
+        android:id="@+id/imgMitsuo"
+        android:layout_width="600dp"
+        android:layout_height="400dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/mitsuomodel" />
+
+    <ImageView
+        android:id="@+id/imgBryan"
+        android:layout_width="600dp"
+        android:layout_height="400dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/bryanmodel" />
+
+    <ImageView
+        android:id="@+id/imgNatasha"
+        android:layout_width="600dp"
+        android:layout_height="400dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/natashamodel" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

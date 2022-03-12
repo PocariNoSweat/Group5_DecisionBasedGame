@@ -42,13 +42,13 @@ public class Scene3TellMitsuo3DlgFlow {
                 break;
             case 2:
                 dlg.setText(NatashaDialogue.gettxtNatasha1());
-                //pending imgNatasha.setVisibility(View.VISIBLE);
+                imgNatasha.setVisibility(View.VISIBLE);
                 imgToni.setVisibility(View.INVISIBLE);
                 txtname.setText("Natasha");
                 break;
             case 3:
                 dlg.setText(ToniDialogue.gettxtToni2());
-               //pending imgNatasha.setVisibility(View.INVISIBLE);
+                imgNatasha.setVisibility(View.INVISIBLE);
                 imgToni.setVisibility(View.VISIBLE);
                 txtname.setText("Toni");
                 break;
@@ -71,13 +71,13 @@ public class Scene3TellMitsuo3DlgFlow {
             case 7:
                 dlg.setText(MitsuoDialogue.gettxtMitsuo1());
                 imgLeRodge.setVisibility(View.INVISIBLE);
-                //pending imgMitsuo.setVisibility(View.VISIBLE);
+                imgMitsuo.setVisibility(View.VISIBLE);
                 txtname.setText("Mitsuo");
                 break;
             case 8:
                 dlg.setText(ScenarioDialogues.gettxt8());
                 dlgscene.setBackgroundResource(R.drawable.backgroundscene1_2);
-              //pending  imgMitsuo.setVisibility(View.INVISIBLE);
+                imgMitsuo.setVisibility(View.INVISIBLE);
                 txtname.setVisibility(View.INVISIBLE);
                 break;
             case 9:
@@ -88,50 +88,50 @@ public class Scene3TellMitsuo3DlgFlow {
                 break;
             case 10:
                 dlg.setText(MitsuoDialogue.gettxtMitsuo2());
-               //pending imgMitsuo.setVisibility(View.VISIBLE);
+                imgMitsuo.setVisibility(View.VISIBLE);
                 imgToni.setVisibility(View.INVISIBLE);
                 txtname.setText("Mitsuo");
                 break;
             case 11:
                 dlg.setText(ToniDialogue.gettxtToni4());
-                //pending imgMitsuo.setVisibility(View.INVISIBLE);
+                imgMitsuo.setVisibility(View.INVISIBLE);
                 imgToni.setVisibility(View.VISIBLE);
                 txtname.setText("Toni");
                 break;
             case 12:
                 dlg.setText(MitsuoDialogue.gettxtMitsuo3());
                 imgToni.setVisibility(View.INVISIBLE);
-                //pending imgMitsuo.setVisibility(View.VISIBLE);
+                imgMitsuo.setVisibility(View.VISIBLE);
                 txtname.setText("Mitsuo");
                 break;
             case 13:
                 dlg.setText(ToniDialogue.gettxtToni5());
                 imgToni.setVisibility(View.VISIBLE);
-               //pending imgMitsuo.setVisibility(View.INVISIBLE);
+                imgMitsuo.setVisibility(View.INVISIBLE);
                 txtname.setText("Toni");
                 break;
             case 14:
                 dlg.setText(MitsuoDialogue.gettxtMitsuo4());
                 imgToni.setVisibility(View.INVISIBLE);
-               //pending imgMitsuo.setVisibility(View.VISIBLE);
+                imgMitsuo.setVisibility(View.VISIBLE);
                 txtname.setText("Mitsuo");
                 break;
             case 15:
                 dlg.setText(ToniDialogue.gettxtToni6());
                 imgToni.setVisibility(View.VISIBLE);
-               //pending imgMitsuo.setVisibility(View.INVISIBLE);
+                imgMitsuo.setVisibility(View.INVISIBLE);
                 txtname.setText("Toni");
                 break;
             case 16:
                 dlg.setText(MitsuoDialogue.gettxtMitsuo5());
                 imgToni.setVisibility(View.INVISIBLE);
-                //pending imgMitsuo.setVisibility(View.VISIBLE);
+                imgMitsuo.setVisibility(View.VISIBLE);
                 txtname.setText("Mitsuo");
                 break;
             case 17:
                 dlg.setText(ToniDialogue.gettxtToni7());
                 imgToni.setVisibility(View.VISIBLE);
-                //pending imgMitsuo.setVisibility(View.INVISIBLE);
+                imgMitsuo.setVisibility(View.INVISIBLE);
                 txtname.setText("Toni");
                 break;
             case 18:
@@ -141,37 +141,37 @@ public class Scene3TellMitsuo3DlgFlow {
                 break;
             case 19:
                 dlg.setText(MitsuoDialogue.gettxtMitsuo6());
-              //pending  imgMitsuo.setVisibility(View.VISIBLE);
+                imgMitsuo.setVisibility(View.VISIBLE);
                 txtname.setText("Mitsuo");
                 txtname.setVisibility(View.VISIBLE);
                 break;
             case 20:
                 dlg.setText(ToniDialogue.gettxtToni8());
                 imgToni.setVisibility(View.VISIBLE);
-               //pending imgMitsuo.setVisibility(View.INVISIBLE);
+                imgMitsuo.setVisibility(View.INVISIBLE);
                 txtname.setText("Toni");
                 break;
             case 21:
                 dlg.setText(MitsuoDialogue.gettxtMitsuo7());
                 imgToni.setVisibility(View.INVISIBLE);
-              //pending imgMitsuo.setVisibility(View.VISIBLE);
+                imgMitsuo.setVisibility(View.VISIBLE);
                 txtname.setText("Mitsuo");
                 break;
             case 22:
                 dlg.setText(ToniDialogue.gettxtToni9());
                 imgToni.setVisibility(View.VISIBLE);
-               //pending imgMitsuo.setVisibility(View.INVISIBLE);
+                imgMitsuo.setVisibility(View.INVISIBLE);
                 txtname.setText("Toni");
                 break;
             case 23:
                 dlg.setText(MitsuoDialogue.gettxtMitsuo8());
                 imgToni.setVisibility(View.INVISIBLE);
-              //pending  imgMitsuo.setVisibility(View.VISIBLE);
+                imgMitsuo.setVisibility(View.VISIBLE);
                 txtname.setText("Mitsuo");
                 break;
             case 24:
                 txtname.setVisibility(View.INVISIBLE);
-                //pending imgMitsuo.setVisibility(View.INVISIBLE);
+                imgMitsuo.setVisibility(View.INVISIBLE);
                 break;
 
 

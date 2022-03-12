@@ -37,6 +37,22 @@ public class MitsuoDialogue {
     static String txtMitsuo18 = "Phew. I thought it was the end for Toni and us";
     //END OF YES txts
 
+    //TELL EVERYONE txts
+    static String txtMitsuo19 = "Guys...";
+    static String txtMitsuo20 = "Guys";
+    static String txtMitsuo21 = "But-";
+    //END OF TELL EVERYONE txts
+
+    //ASK BRYAN txts
+    static String txtMitsuo22 = "Yes.";
+    static String txtMitsuo23 = "Yeah. And I'm feeling-";
+    //END OF ASK BRYAN txts
+
+    //ASK TONI txts
+    static String txtMitsuo24 = "Toni... about the scratch.";
+    static String txtMitsuo25 = "I don't feel so good, Toni";
+    static String txtMitsuo26 = "Should we tell the others?";
+    //END OF ASK TONI txts
 
     public MitsuoDialogue() {}
 
@@ -65,4 +81,12 @@ public class MitsuoDialogue {
     public static String gettxtMitsuo16() { return txtMitsuo16; }
     public static String gettxtMitsuo17() { return txtMitsuo17; }
     public static String gettxtMitsuo18() { return txtMitsuo18; }
+    public static String gettxtMitsuo19() { return txtMitsuo19; }
+    public static String gettxtMitsuo20() { return txtMitsuo20; }
+    public static String gettxtMitsuo21() { return txtMitsuo21; }
+    public static String gettxtMitsuo22() { return txtMitsuo22; }
+    public static String gettxtMitsuo23() { return txtMitsuo23; }
+    public static String gettxtMitsuo24() { return txtMitsuo24; }
+    public static String gettxtMitsuo25() { return txtMitsuo25; }
+    public static String gettxtMitsuo26() { return txtMitsuo26; }
 }

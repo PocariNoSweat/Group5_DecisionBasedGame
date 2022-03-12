@@ -62,13 +62,13 @@ public class FirstSceneDlgFlow {
                 break;
             case 8:
                 dlg.setText(MitsuoDialogue.getSC1_Mitsuo1());
-              //pending  imgMitsuo.setVisibility(View.VISIBLE);
+                imgMitsuo.setVisibility(View.VISIBLE);
                 imgLeRodge.setVisibility(View.INVISIBLE);
                 txtname.setText("Mitsuo");
                 break;
             case 9:
                 dlg.setText(LeRodgeDialogue.getSC1_LeRodge2());
-               //pending imgMitsuo.setVisibility(View.INVISIBLE);
+                imgMitsuo.setVisibility(View.INVISIBLE);
                 imgLeRodge.setVisibility(View.VISIBLE);
                 txtname.setText("LeRodge");
                 break;
@@ -91,13 +91,13 @@ public class FirstSceneDlgFlow {
                 break;
             case 13:
                 txtname.setText("Mitsuo");
-              //pending  imgMitsuo.setVisibility(View.VISIBLE);
+                imgMitsuo.setVisibility(View.VISIBLE);
                 imgLeRodge.setVisibility(View.INVISIBLE);
                 dlg.setText(MitsuoDialogue.getSC1_Mitsuo2());
                 break;
             case 14:
                 txtname.setText("Alex");
-              //pending  imgMitsuo.setVisibility(View.INVISIBLE);
+                imgMitsuo.setVisibility(View.INVISIBLE);
                 imgAlex.setVisibility(View.VISIBLE);
                 dlg.setText(AlexDialogue.getSC1_Alex6());
                 break;
@@ -110,13 +110,13 @@ public class FirstSceneDlgFlow {
             case 16:
                 txtname.setText("Mitsuo");
                 imgLeRodge.setVisibility(View.INVISIBLE);
-              //pending  imgMitsuo.setVisibility(View.VISIBLE);
+                imgMitsuo.setVisibility(View.VISIBLE);
                 dlg.setText(MitsuoDialogue.getSC1_Mitsuo3());
                 break;
             case 17:
                 txtname.setText("Alex");
                 imgAlex.setVisibility(View.VISIBLE);
-               //pending imgMitsuo.setVisibility(View.INVISIBLE);
+                imgMitsuo.setVisibility(View.INVISIBLE);
                 dlg.setText(AlexDialogue.getSC1_Alex7());
                 break;
             case 18:
@@ -161,25 +161,25 @@ public class FirstSceneDlgFlow {
             case 25:
                 txtname.setText("Mitsuo");
                 imgAlex.setVisibility(View.INVISIBLE);
-              //pending  imgMitsuo.setVisibility(View.VISIBLE);
+                imgMitsuo.setVisibility(View.VISIBLE);
                 dlg.setText(MitsuoDialogue.getSC1_Mitsuo4());
                 break;
             case 26:
                 txtname.setText("Alex");
                 imgAlex.setVisibility(View.VISIBLE);
-               //pending imgMitsuo.setVisibility(View.INVISIBLE);
+                imgMitsuo.setVisibility(View.INVISIBLE);
                 dlg.setText(AlexDialogue.getSC1_Alex10());
                 break;
             case 27:
                 txtname.setText("Mitsuo");
                 imgAlex.setVisibility(View.INVISIBLE);
-               //pending imgMitsuo.setVisibility(View.VISIBLE);
+                imgMitsuo.setVisibility(View.VISIBLE);
                 dlg.setText(MitsuoDialogue.getSC1_Mitsuo5());
                 break;
             case 28:
                 txtname.setText("Alex");
                 imgAlex.setVisibility(View.VISIBLE);
-                //pending imgMitsuo.setVisibility(View.INVISIBLE);
+                imgMitsuo.setVisibility(View.INVISIBLE);
                 dlg.setText(AlexDialogue.getSC1_Alex11());
                 break;
             case 29:
@@ -208,19 +208,19 @@ public class FirstSceneDlgFlow {
             case 33:
                 txtname.setText("Natasha");
                 imgAlex.setVisibility(View.INVISIBLE);
-               //pending imgNatasha.setVisibility(View.VISIBLE);
+                imgNatasha.setVisibility(View.VISIBLE);
                 dlg.setText(NatashaDialogue.getSC1_Natasha1());
                 break;
             case 34:
                 txtname.setText("Bryan");
-               //pending imgBryan.setVisibility(View.VISIBLE);
-               //pending imgNatasha.setVisibility(View.INVISIBLE);
+                imgBryan.setVisibility(View.VISIBLE);
+                imgNatasha.setVisibility(View.INVISIBLE);
                 dlg.setText(BryanDialogue.getSC1_Bryan1());
                 break;
             case 35:
                 txtname.setText("Alex");
                 imgAlex.setVisibility(View.VISIBLE);
-               //pending imgBryan.setVisibility(View.INVISIBLE);
+                imgBryan.setVisibility(View.INVISIBLE);
                 dlg.setText(AlexDialogue.getSC1_Alex13());
                 break;
             case 36:
@@ -231,24 +231,24 @@ public class FirstSceneDlgFlow {
                 break;
             case 37:
                 txtname.setText("Natasha");
-                //pending imgNatasha.setVisibility(View.VISIBLE);
+                imgNatasha.setVisibility(View.VISIBLE);
                 imgToni.setVisibility(View.INVISIBLE);
                 dlg.setText(NatashaDialogue.getSC1_Natasha2());
                 break;
             case 38:
                 txtname.setText("LeRodge");
-                //pending imgLeRodge.setVisibility(View.VISIBLE);
-               //pending imgNatasha.setVisibility(View.INVISIBLE);
+                imgLeRodge.setVisibility(View.VISIBLE);
+                imgNatasha.setVisibility(View.INVISIBLE);
                 dlg.setText(LeRodgeDialogue.getSC1_LeRodge9());
                 break;
             case 39:
                 txtname.setText("Mitsuo");
-                //pending imgMitsuo.setVisibility(View.VISIBLE);
-                //pending imgLeRodge.setVisibility(View.INVISIBLE);
+                imgMitsuo.setVisibility(View.VISIBLE);
+                imgLeRodge.setVisibility(View.INVISIBLE);
                 dlg.setText(MitsuoDialogue.getSC1_Mitsuo6());
                 break;
             case 40:
-                //pending imgMitsuo.setVisibility(View.INVISIBLE);
+                imgMitsuo.setVisibility(View.INVISIBLE);
                 txtname.setVisibility(View.INVISIBLE);
                 break;
 

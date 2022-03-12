@@ -25,7 +25,18 @@ public class NatashaDialogue {
     static String txtNatasha10 = "It looked like you were about to turn into a zombie.";
     //END OF YES txts
 
+    //TELL TRUTH txts
+    static String txtNatasha11 = "Just because of a scratch?";
+    static String txtNatasha12 = "What?";
+    //END OF TELL TRUTH txts
 
+    //CONTINUE HELP txts
+    static String txtNatasha13 = "It's just a scratch, you kid.";
+    //END OF CONTINUE HELP txts
+
+    //TELL EVERYONE txts
+    static String txtNatasha14 = "Come on, it's just a scratch!";
+    //END OF TELL EVERYONE txts
 
     public NatashaDialogue() {}
 
@@ -42,4 +53,8 @@ public class NatashaDialogue {
     public static String gettxtNatasha8() { return txtNatasha8; }
     public static String gettxtNatasha9() { return txtNatasha9; }
     public static String gettxtNatasha10() { return txtNatasha10; }
+    public static String gettxtNatasha11() { return txtNatasha11; }
+    public static String gettxtNatasha12() { return txtNatasha12; }
+    public static String gettxtNatasha13() { return txtNatasha13; }
+    public static String gettxtNatasha14() { return txtNatasha14; }
 }

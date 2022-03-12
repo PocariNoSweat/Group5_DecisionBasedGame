@@ -55,11 +55,11 @@ public class Scene2BlameOldManDlgFlow {
             case 5:
                 dlg.setText(NatashaDialogue.getSC2D4_Natasha1());
                 imgToni.setVisibility(View.INVISIBLE);
-                //pending imgNatasha.setVisibility(View.VISIBLE);
+                imgNatasha.setVisibility(View.VISIBLE);
                 txtname.setText("Natasha");
                 break;
             case 6:
-               //pending imgNatasha.setVisibility(View.INVISIBLE);
+                imgNatasha.setVisibility(View.INVISIBLE);
                 txtname.setVisibility(View.INVISIBLE);
                 break;
         }

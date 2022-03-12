@@ -41,6 +41,20 @@ public class AlexDialogue {
     static String txtAlex17 = "We don't have much time, let's seek for shelter.";
     //END OF YES txts
 
+    //AVOID QUES txts
+    static String txtAlex18 = "See? Even Toni thinks so. We should not help this man at all cause!";
+    //END OF AVOID QUES txts
+
+    //TELL TRUTH txts
+    static String txtAlex19 = "Everyone! Get away from the old man.";
+    //END OF TELL TRUTH txts
+
+    //IGNORE SCRATCH txts
+    static String txtAlex20 = "What the hell is going on?!";
+    static String txtAlex21 = "Mitsuo! What are you-";
+    static String txtAlex22 = "Get off me!";
+    //END OF IGNORE SCRATCH txts
+
 
     public AlexDialogue () {}
 
@@ -74,4 +88,9 @@ public class AlexDialogue {
     public static String gettxtAlex15() { return txtAlex15; }
     public static String gettxtAlex16() { return txtAlex16; }
     public static String gettxtAlex17() { return txtAlex17; }
+    public static String gettxtAlex18() { return txtAlex18; }
+    public static String gettxtAlex19() { return txtAlex19; }
+    public static String gettxtAlex20() { return txtAlex20; }
+    public static String gettxtAlex21() { return txtAlex21; }
+    public static String gettxtAlex22() { return txtAlex22; }
 }

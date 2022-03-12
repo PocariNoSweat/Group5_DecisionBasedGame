@@ -38,14 +38,14 @@ public class Scene4TMyesDlgFlow {
             case 1:
                 txtname.setVisibility(View.VISIBLE);
                 dlg.setText(MitsuoDialogue.gettxtMitsuo9());
-               //pending imgMitsuo.setVisibility(View.VISIBLE);
+                imgMitsuo.setVisibility(View.VISIBLE);
                 txtname.setText("Mitsuo");
                 break;
             case 2:
                 txtname.setText("Toni");
                 dlg.setText(ToniDialogue.gettxtToni10());
                 imgToni.setVisibility(View.VISIBLE);
-                // pending imgMitsuo.setVisibility(View.INVISIBLE);
+                imgMitsuo.setVisibility(View.INVISIBLE);
                 break;
             case 3:
                 txtname.setText("Bryan");
@@ -56,13 +56,13 @@ public class Scene4TMyesDlgFlow {
             case 4:
                 txtname.setText("Natasha");
                 dlg.setText(NatashaDialogue.gettxtNatasha2());
-                // pending imgNatasha.setVisibility(View.VISIBLE);
-               // pending imgBryan.setVisibility(View.INVISIBLE);
+                imgNatasha.setVisibility(View.VISIBLE);
+                imgBryan.setVisibility(View.INVISIBLE);
                 break;
             case 5:
                txtname.setText("LeRodge");
                dlg.setText(LeRodgeDialogue.gettxtLeRodge2());
-               //imgNatasha.setVisibility(View.INVISIBLE);
+                imgNatasha.setVisibility(View.INVISIBLE);
                 imgLeRodge.setVisibility(View.VISIBLE);
                 break;
             case 6:
@@ -98,11 +98,11 @@ public class Scene4TMyesDlgFlow {
                 txtname.setText("Mitsuo");
                 dlg.setText(MitsuoDialogue.gettxtMitsuo10());
                 imgToni.setVisibility(View.INVISIBLE);
-               // imgMitsuo.setVisibility(View.VISIBLE);
+                imgMitsuo.setVisibility(View.VISIBLE);
                 break;
             case 12:
                 txtname.setVisibility(View.INVISIBLE);
-               // imgMitsuo.setVisibility(View.INVISIBLE);
+                imgMitsuo.setVisibility(View.INVISIBLE);
                 dlg.setText(ScenarioDialogues.gettxt23());
                 break;
             case 13:
@@ -114,43 +114,43 @@ public class Scene4TMyesDlgFlow {
             case 15:
                 dlg.setText(NatashaDialogue.gettxtNatasha6());
                 txtname.setVisibility(View.VISIBLE);
-               // imgNatasha.setVisibility(View.VISIBLE);
+                imgNatasha.setVisibility(View.VISIBLE);
                 txtname.setText("Natasha");
                 break;
             case 16:
                 dlg.setText(AlexDialogue.gettxtAlex4());
                 txtname.setText("Alex");
-              //  imgNatasha.setVisibility(View.INVISIBLE);
+                imgNatasha.setVisibility(View.INVISIBLE);
                 imgAlex.setVisibility(View.VISIBLE);
                 break;
             case 17:
                 dlg.setText(NatashaDialogue.gettxtNatasha3());
                 txtname.setText("Natasha");
-              //  imgNatasha.setVisibility(View.VISIBLE);
+                imgNatasha.setVisibility(View.VISIBLE);
                 imgAlex.setVisibility(View.INVISIBLE);
                 break;
             case 18:
                 dlg.setText(AlexDialogue.gettxtAlex5());
                 txtname.setText("Alex");
                 imgAlex.setVisibility(View.VISIBLE);
-            //    imgNatasha.setVisibility(View.INVISIBLE);
+                imgNatasha.setVisibility(View.INVISIBLE);
                 break;
             case 19:
                 dlg.setText(NatashaDialogue.gettxtNatasha4());
                 txtname.setText("Natasha");
                 imgAlex.setVisibility(View.INVISIBLE);
-               // imgNatasha.setVisibility(View.VISIBLE);
+                imgNatasha.setVisibility(View.VISIBLE);
                 break;
             case 20:
                 dlg.setText(MitsuoDialogue.gettxtMitsuo11());
                 txtname.setText("Mitsuo");
-              // imgNatasha.setVisibility(View.INVISIBLE);
-               // imgMitsuo.setVisibility(View.VISIBLE);
+                imgNatasha.setVisibility(View.INVISIBLE);
+                imgMitsuo.setVisibility(View.VISIBLE);
                 break;
             case 21:
                 dlg.setText(ScenarioDialogues.gettxt13());
                 txtname.setVisibility(View.INVISIBLE);
-                // imgMitsuo.setVisibility(View.INVISIBLE);
+                imgMitsuo.setVisibility(View.INVISIBLE);
                 break;
             case 22:
                 txtname.setText("LeRodge");
@@ -181,25 +181,25 @@ public class Scene4TMyesDlgFlow {
             case 27:
                 txtname.setText("Bryan");
                 dlg.setText(BryanDialogue.gettxtBryan2());
-              //  imgBryan.setVisibility(View.VISIBLE);
+                imgBryan.setVisibility(View.VISIBLE);
                 imgLeRodge.setVisibility(View.INVISIBLE);
                 break;
             case 28:
                 txtname.setText("LeRodge");
                 dlg.setText(LeRodgeDialogue.gettxtLeRodge5());
-                // imgBryan.setVisibility(View.INVISIBLE);
+                imgBryan.setVisibility(View.INVISIBLE);
                 imgLeRodge.setVisibility(View.VISIBLE);
                 break;
             case 29:
                 txtname.setText("Natasha");
                 dlg.setText(NatashaDialogue.gettxtNatasha5());
                 imgLeRodge.setVisibility(View.INVISIBLE);
-              //  imgNatasha.setVisibility(View.VISIBLE);
+                imgNatasha.setVisibility(View.VISIBLE);
                 break;
             case 30:
                 txtname.setText("Alex");
                 dlg.setText(AlexDialogue.gettxtAlex7());
-             //   imgNatasha.setVisibility(View.INVISIBLE);
+                imgNatasha.setVisibility(View.INVISIBLE);
                 imgAlex.setVisibility(View.VISIBLE);
                 break;
             case 31:
@@ -229,12 +229,12 @@ public class Scene4TMyesDlgFlow {
                 txtname.setText("Bryan");
                 dlg.setText(BryanDialogue.gettxtBryan3());
                 imgAlex.setVisibility(View.INVISIBLE);
-               // imgBryan.setVisibility(View.VISIBLE);
+                imgBryan.setVisibility(View.VISIBLE);
                 break;
             case 37:
                 txtname.setText("Alex");
                 dlg.setText(AlexDialogue.gettxtAlex10());
-             //   imgBryan.setVisibility(View.INVISIBLE);
+                imgBryan.setVisibility(View.INVISIBLE);
                 imgAlex.setVisibility(View.VISIBLE);
                 break;
             case 38:
@@ -246,12 +246,12 @@ public class Scene4TMyesDlgFlow {
                 txtname.setVisibility(View.VISIBLE);
                 txtname.setText("Bryan");
                 dlg.setText(BryanDialogue.gettxtBryan4());
-             //   imgBryan.setVisibility(View.VISIBLE);
+                imgBryan.setVisibility(View.VISIBLE);
                 break;
             case 40:
                txtname.setText("Alex");
                dlg.setText(AlexDialogue.gettxtAlex11());
-             //  imgBryan.setVisibility(View.INVISIBLE);
+               imgBryan.setVisibility(View.INVISIBLE);
                imgAlex.setVisibility(View.VISIBLE);
                break;
             case 41:

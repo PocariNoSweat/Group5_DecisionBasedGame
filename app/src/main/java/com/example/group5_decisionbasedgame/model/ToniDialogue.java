@@ -37,7 +37,32 @@ public class ToniDialogue {
     static String txtToni20 = "I'm fine LeRodge. I don't even know what happened.";
     //END OF YES txts
 
+    //LIE txts
+    static String txtToni21 = "I'm alright. Don't worry.";
+    static String txtToni22 = "Yes, I'm alright.";
+    //END OF LIE txts
 
+    //IGNORE QUES txts
+    static String txtToni23 = "Oh, yes? I apologize, I zoned out for a bit. What was that again?";
+    //END OF IGNORE QUES txts
+
+    //AVOID QUES txts
+    static String txtToni24 = "Uh, you know, on a second thought I don't think we should help him.";
+    static String txtToni25 = "He seems like danger to me.";
+    //END OF AVOID QUES txts
+
+    //TELL TRUTH txts
+    static String txtToni26 = "To be frank, I don't feel so good.";
+    //END OF TELL TRUTH txts
+
+    //TELL EVERYONE txts
+    static String txtToni27 = "I don't feel-";
+    //END OF TELL EVERYONE txts
+
+    //ASK TONI txts
+    static String txtToni28 = "I know. Both of us are in danger, Mitsuo.";
+    static String txtToni29 = "Everything's going to be okay Mitsuo.";
+    //END OF ASK TONI txts
 
 
     public ToniDialogue () {}
@@ -66,5 +91,13 @@ public class ToniDialogue {
     public static String gettxtToni18() { return txtToni18; }
     public static String gettxtToni19() { return txtToni19; }
     public static String gettxtToni20() { return txtToni20; }
-
+    public static String gettxtToni21() { return txtToni21; }
+    public static String gettxtToni22() { return txtToni22; }
+    public static String gettxtToni23() { return txtToni23; }
+    public static String gettxtToni24() { return txtToni24; }
+    public static String gettxtToni25() { return txtToni25; }
+    public static String gettxtToni26() { return txtToni26; }
+    public static String gettxtToni27() { return txtToni27; }
+    public static String gettxtToni28() { return txtToni28; }
+    public static String gettxtToni29() { return txtToni29; }
 }

@@ -34,6 +34,16 @@ public class LeRodgeDialogue {
     static String txtLeRodge13 = "Toni, are you sure that you're okay?";
     // END OF YES txts
 
+    //CONTINUE HELP txts
+    static String txtLeRodge14 = "Mitsuo, come and help.";
+    //END OF CONTINUE HELP txts
+
+    //IGNORE SCRATCH txts
+    static String txtLeRodge15 = "Mitsuo, come and help!";
+    static String txtLeRodge16 = "Mitsuo, what the hell!";
+    //END OF IGNORE SCRATCH txts
+
+
 
     public LeRodgeDialogue() {}
 
@@ -59,4 +69,7 @@ public class LeRodgeDialogue {
     public static String gettxtLeRodge11() { return txtLeRodge11; }
     public static String gettxtLeRodge12() { return txtLeRodge12; }
     public static String gettxtLeRodge13() { return txtLeRodge13; }
+    public static String gettxtLeRodge14() { return txtLeRodge14; }
+    public static String gettxtLeRodge15() { return txtLeRodge15; }
+    public static String gettxtLeRodge16() { return txtLeRodge16; }
 }

@@ -53,6 +53,9 @@ public class FirstScene extends AppCompatActivity implements View.OnClickListene
         imgAlex = findViewById(R.id.imgAlex);
         imgLeRodge = findViewById(R.id.imgLeRodge);
         imgToni = findViewById(R.id.imgToni);
+        imgMitsuo = findViewById(R.id.imgMitsuo);
+        imgBryan = findViewById(R.id.imgBryan);
+        imgNatasha = findViewById(R.id.imgNatasha);
 
         txtdlg = findViewById(R.id.txtdlg);
         txtname = findViewById(R.id.txtname);
