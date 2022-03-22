@@ -1,5 +1,7 @@
 package com.example.group5_decisionbasedgame.view;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -70,8 +72,19 @@ public class FirstDecision extends AppCompatActivity implements View.OnClickList
                 bgm.stop();
                 break;
             case R.id.txtdecision2:
-                break;
             case R.id.txtdecision3:
+                AlertDialog.Builder builder = new AlertDialog.Builder(FirstDecision.this);
+                builder.setCancelable(true);
+                builder.setTitle("Attention!");
+                builder.setMessage("This decision is unavailable. Try another one.");
+
+                builder.setNegativeButton("Okay", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+                builder.show();
                 break;
             case R.id.txtdecision4:
                 startActivity(new Intent(FirstDecision.this, Scene2BlameOldMan.class));

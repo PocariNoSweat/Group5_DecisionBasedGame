@@ -1,6 +1,8 @@
 package com.example.group5_decisionbasedgame.view;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
@@ -85,14 +87,18 @@ public class Scene2IgnoreScratch extends AppCompatActivity implements View.OnCli
                 bgm.stop();
                 break;
             case R.id.txtdecision3:
-                startActivity(new Intent(Scene2IgnoreScratch.this, Scene3TellMitsuo.class));//todo change class
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-                bgm.stop();
-                break;
             case R.id.txtdecision4:
-                startActivity(new Intent(Scene2IgnoreScratch.this, Scene3TellAlex.class));//todo change class
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-                bgm.stop();
+                AlertDialog.Builder builder = new AlertDialog.Builder(Scene2IgnoreScratch.this);
+                builder.setCancelable(true);
+                builder.setTitle("Attention!");
+                builder.setMessage("This decision is unavailable. Try another one.");
+
+                builder.setNegativeButton("Okay", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
                 break;
         }
     }

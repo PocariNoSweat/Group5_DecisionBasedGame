@@ -53,7 +53,7 @@ public class Scene3ContinueHelp extends AppCompatActivity implements View.OnClic
         btnpause = findViewById(R.id.btnpause);
         btnpause.setOnClickListener(this);
 
-        imgAlex = findViewById(R.id.imgAlex);
+        imgAlex = 
         imgLeRodge = findViewById(R.id.imgLeRodge);
         imgToni = findViewById(R.id.imgToni);
         imgBryan = findViewById(R.id.imgBryan);
